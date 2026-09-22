@@ -1,0 +1,5 @@
+node_modules/
+snapshots/*.png
+# DOM captures, which contain PII
+snapshots/*.html
+snapshots/*.json

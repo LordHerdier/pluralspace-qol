@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" data-theme="dark" data-appearance="dark" data-bg="grid" style="--app-header-h: 63px;" data-psqol-24h="on"><head>
+
+	<meta charset="utf8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#0c0618">
+	<style type="text/css">:root, :host {
+			--fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free';
+			--fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free';
+			--fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro';
+			--fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro';
+			--fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone';
+			--fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone';
+			--fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone';
+			--fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone';
+			--fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands';
+			--fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp';
+			--fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp';
+			--fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp';
+			--fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';
+			--fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone';
+			--fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone';
+			--fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone';
+			--fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone';
+			--fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab';
+			--fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press';
+			--fa-font-slab-duo-regular: normal 400 1em/1 'Font Awesome 7 Slab Duo';
+			--fa-font-slab-press-duo-regular: normal 400 1em/1 'Font Awesome 7 Slab Press Duo';
+			--fa-font-pixel-regular: normal 400 1em/1 'Font Awesome 7 Pixel';
+			--fa-font-mosaic-solid: normal 900 1em/1 'Font Awesome 7 Mosaic';
+			--fa-font-vellum-solid: normal 900 1em/1 'Font Awesome 7 Vellum';
+			--fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard';
+			--fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint';
+			--fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog';
+			--fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo';
+			--fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch';
+			--fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite';
+			--fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly';
+			--fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill';
+			--fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo';
+			--fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel';
+			--fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility';
+			--fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo';
+			--fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill';
+		}
+		
+		.svg-inline--fa {
+			box-sizing: content-box;
+			display: var(--fa-display, inline-block);
+			height: 1em;
+			overflow: visible;
+			vertical-align: -0.125em;
+			width: var(--fa-width, 1.25em);
+		}
+		.svg-inline--fa.fa-2xs {
+			vertical-align: 0.1em;
+		}
+		.svg-inline--fa.fa-xs {
+			vertical-align: 0em;
+		}
+		.svg-inline--fa.fa-sm {
+			vertical-align: -0.0714285714em;
+		}
+		.svg-inline--fa.fa-lg {
+			vertical-align: -0.2em;
+		}
+		.svg-inline--fa.fa-xl {
+			vertical-align: -0.25em;
+		}
+		.svg-inline--fa.fa-2xl {
+			vertical-align: -0.3125em;
+		}
+		.svg-inline--fa.fa-pull-left,
+		.svg-inline--fa .fa-pull-start {
+			float: inline-start;
+			margin-inline-end: var(--fa-pull-margin, 0.3em);
+		}
+		.svg-inline--fa.fa-pull-right,
+		.svg-inline--fa .fa-pull-end {
+			float: inline-end;
+			margin-inline-start: var(--fa-pull-margin, 0.3em);
+		}
+		.svg-inline--fa.fa-li {
+			width: var(--fa-li-width, 2em);
+			inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+			inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */
+		}
+		
+		.fa-layers-counter, .fa-layers-text {
+			display: inline-block;
+			position: absolute;
+			text-align: center;
+		}
+		
+		.fa-layers {
+			display: inline-block;
+			height: 1em;
+			position: relative;
+			text-align: center;
+			vertical-align: -0.125em;
+			width: var(--fa-width, 1.25em);
+		}
+		.fa-layers .svg-inline--fa {
+			inset: 0;
+			margin: auto;
+			position: absolute;
+			transform-origin: center center;
+		}
+		
+		.fa-layers-text {
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			transform-origin: center center;
+		}
+		
+		.fa-layers-counter {
+			background-color: var(--fa-counter-background-color, #ff253a);
+			border-radius: var(--fa-counter-border-radius, 1em);
+			box-sizing: border-box;
+			color: var(--fa-inverse, #fff);
+			line-height: var(--fa-counter-line-height, 1);
+			max-width: var(--fa-counter-max-width, 5em);
+			min-width: var(--fa-counter-min-width, 1.5em);
+			overflow: hidden;
+			padding: var(--fa-counter-padding, 0.25em 0.5em);
+			right: var(--fa-right, 0);
+			text-overflow: ellipsis;
+			top: var(--fa-top, 0);
+			transform: scale(var(--fa-counter-scale, 0.25));
+			transform-origin: top right;
+		}
+		
+		.fa-layers-bottom-right {
+			bottom: var(--fa-bottom, 0);
+			right: var(--fa-right, 0);
+			top: auto;
+			transform: scale(var(--fa-layers-scale, 0.25));
+			transform-origin: bottom right;
+		}
+		
+		.fa-layers-bottom-left {
+			bottom: var(--fa-bottom, 0);
+			left: var(--fa-left, 0);
+			right: auto;
+			top: auto;
+			transform: scale(var(--fa-layers-scale, 0.25));
+			transform-origin: bottom left;
+		}
+		
+		.fa-layers-top-right {
+			top: var(--fa-top, 0);
+			right: var(--fa-right, 0);
+			transform: scale(var(--fa-layers-scale, 0.25));
+			transform-origin: top right;
+		}
+		
+		.fa-layers-top-left {
+			left: var(--fa-left, 0);
+			right: auto;
+			top: var(--fa-top, 0);
+			transform: scale(var(--fa-layers-scale, 0.25));
+			transform-origin: top left;
+		}
+		
+		.fa-1x {
+			font-size: 1em;
+		}
+		
+		.fa-2x {
+			font-size: 2em;
+		}
+		
+		.fa-3x {
+			font-size: 3em;
+		}
+		
+		.fa-4x {
+			font-size: 4em;
+		}
+		
+		.fa-5x {
+			font-size: 5em;
+		}
+		
+		.fa-6x {
+			font-size: 6em;
+		}
+		
+		.fa-7x {
+			font-size: 7em;
+		}
+		
+		.fa-8x {
+			font-size: 8em;
+		}
+		
+		.fa-9x {
+			font-size: 9em;
+		}
+		
+		.fa-10x {
+			font-size: 10em;
+		}
+		
+		.fa-2xs {
+			font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */
+			line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */
+			vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+		}
+		
+		.fa-xs {
+			font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */
+			line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */
+			vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+		}
+		
+		.fa-sm {
+			font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */
+			line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */
+			vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+		}
+		
+		.fa-lg {
+			font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */
+			line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */
+			vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+		}
+		
+		.fa-xl {
+			font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */
+			line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */
+			vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+		}
+		
+		.fa-2xl {
+			font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */
+			line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */
+			vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */
+		}
+		
+		.fa-width-auto {
+			--fa-width: auto;
+		}
+		
+		.fa-fw,
+		.fa-width-fixed {
+			--fa-width: 1.25em;
+		}
+		
+		.fa-canvas-square {
+			padding-block: 0.125em;
+			margin-block-end: -0.125em;
+		}
+		
+		.fa-canvas-roomy {
+			padding-block: 0.25em;
+			padding-inline: 0.125em;
+			margin-block-end: -0.25em;
+			box-sizing: content-box;
+		}
+		
+		.fa-ul {
+			list-style-type: none;
+			margin-inline-start: var(--fa-li-margin, 2.5em);
+			padding-inline-start: 0;
+		}
+		.fa-ul > li {
+			position: relative;
+		}
+		
+		.fa-li {
+			inset-inline-start: calc(-1 * var(--fa-li-width, 2em));
+			position: absolute;
+			text-align: center;
+			width: var(--fa-li-width, 2em);
+			line-height: inherit;
+		}
+		
+		/* Heads Up: Bordered Icons will not be supported in the future!
+		- This feature will be deprecated in the next major release of Font Awesome (v8)!
+		- You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.
+		*/
+		/* Notes:
+		* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)
+		* --@{v.$css-prefix}-border-padding =
+		** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)
+		** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)
+		*/
+		.fa-border {
+			border-color: var(--fa-border-color, #eee);
+			border-radius: var(--fa-border-radius, 0.1em);
+			border-style: var(--fa-border-style, solid);
+			border-width: var(--fa-border-width, 0.0625em);
+			box-sizing: var(--fa-border-box-sizing, content-box);
+			padding: var(--fa-border-padding, 0.1875em 0.25em);
+		}
+		
+		.fa-pull-left,
+		.fa-pull-start {
+			float: inline-start;
+			margin-inline-end: var(--fa-pull-margin, 0.3em);
+		}
+		
+		.fa-pull-right,
+		.fa-pull-end {
+			float: inline-end;
+			margin-inline-start: var(--fa-pull-margin, 0.3em);
+		}
+		
+		.fa-beat {
+			animation-name: fa-beat;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 1s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, ease-in-out);
+		}
+		
+		.fa-bounce {
+			animation-name: fa-bounce;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 1s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+		}
+		
+		.fa-fade {
+			animation-name: fa-fade;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 1s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, ease-in-out);
+		}
+		
+		.fa-beat-fade {
+			animation-name: fa-beat-fade;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 1s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, ease-in-out);
+		}
+		
+		.fa-flip {
+			animation-name: fa-flip;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 1.5s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, ease-in-out);
+		}
+		
+		.fa-flip-360 {
+			animation-name: fa-flip-360;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 1s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, ease-in-out);
+		}
+		
+		.fa-shake {
+			animation-name: fa-shake;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 0.75s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, ease-in-out);
+		}
+		
+		.fa-spin {
+			animation-name: fa-spin;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 2s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, linear);
+		}
+		
+		.fa-spin-reverse {
+			--fa-animation-direction: reverse;
+		}
+		
+		.fa-pulse,
+		.fa-spin-pulse {
+			animation-name: fa-spin;
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 1s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, steps(8));
+		}
+		
+		.fa-spin-snap {
+			animation-name: fa-spin-snap;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 3s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, linear);
+		}
+		
+		.fa-spin-snap-4 {
+			animation-name: fa-spin-snap-4;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 2.4s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, linear);
+		}
+		
+		.fa-spin-snap-8 {
+			animation-name: fa-spin-snap-8;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 4s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, linear);
+		}
+		
+		.fa-buzz {
+			animation-name: fa-buzz;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 0.6s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, linear);
+		}
+		
+		.fa-wag {
+			animation-name: fa-wag;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 0.9s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, ease-out);
+			transform-origin: bottom center;
+		}
+		
+		.fa-float {
+			animation-name: fa-float;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 3s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, ease-in-out);
+			will-change: transform;
+		}
+		
+		.fa-swing {
+			animation-name: fa-swing;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 1.2s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, ease-out);
+			transform-origin: top center;
+		}
+		
+		.fa-jello {
+			animation-name: fa-jello;
+			animation-delay: var(--fa-animation-delay, 0s);
+			animation-direction: var(--fa-animation-direction, normal);
+			animation-duration: var(--fa-animation-duration, 0.9s);
+			animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+			animation-timing-function: var(--fa-animation-timing, ease-out);
+		}
+		
+		@media (prefers-reduced-motion: reduce) {
+			.fa-beat,
+			.fa-bounce,
+			.fa-fade,
+			.fa-beat-fade,
+			.fa-flip,
+			.fa-flip-360,
+			.fa-pulse,
+			.fa-shake,
+			.fa-spin,
+			.fa-spin-pulse,
+			.fa-buzz,
+			.fa-float,
+			.fa-jello,
+			.fa-spin-snap,
+			.fa-spin-snap-4,
+			.fa-spin-snap-8,
+			.fa-swing,
+			.fa-wag {
+				animation: none !important;
+				transition: none !important;
+			}
+		}
+		@keyframes fa-beat {
+			0% {
+				transform: scale(1);
+			}
+			25% {
+				transform: scale(calc(1.25 * var(--fa-beat-scale, 1.25)));
+			}
+			45% {
+				transform: scale(calc(1.22 * var(--fa-beat-scale, 1.22)));
+			}
+			65% {
+				transform: scale(calc(1.25 * var(--fa-beat-scale, 1.25)));
+			}
+			90% {
+				transform: scale(1);
+			}
+		}
+		@keyframes fa-bounce {
+			0% {
+				transform: scale(1, 1) translateY(0);
+				animation-timing-function: var(--fa-animation-timing);
+			}
+			14% {
+				transform: scale(var(--fa-bounce-start-scale-x, 1.06), var(--fa-bounce-start-scale-y, 0.94)) translateY(var(--fa-bounce-anticipation, 3px));
+				animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+			}
+			32% {
+				transform: scale(var(--fa-bounce-jump-scale-x, 0.94), var(--fa-bounce-jump-scale-y, 1.12)) translateY(calc(-1 * var(--fa-bounce-height, 0.5em)));
+				animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+			}
+			52% {
+				transform: scale(1, 1) translateY(calc(-1 * var(--fa-bounce-height, 0.5em) * 1.1));
+				animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+			}
+			70% {
+				transform: scale(var(--fa-bounce-land-scale-x, 1.06), var(--fa-bounce-land-scale-y, 0.92)) translateY(0);
+				animation-timing-function: cubic-bezier(0.33, 0.33, 0.66, 1);
+			}
+			85% {
+				transform: scale(0.98, 1.04) translateY(calc(-2px * var(--fa-bounce-rebound, 1)));
+				animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1);
+			}
+			100% {
+				transform: scale(1, 1) translateY(0);
+			}
+		}
+		@keyframes fa-fade {
+			0% {
+				opacity: 1;
+				transform: scale(1);
+				animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+			}
+			40% {
+				opacity: var(--fa-fade-opacity, 0.4);
+				transform: scale(0.98);
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			100% {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+		@keyframes fa-beat-fade {
+			0% {
+				opacity: var(--fa-beat-fade-opacity, 0.4);
+				transform: scale(1);
+				animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+			}
+			25% {
+				opacity: calc(var(--fa-beat-fade-opacity, 0.4) + 0.4);
+				transform: scale(var(--fa-beat-fade-scale, 1.28));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			45% {
+				opacity: 1;
+				transform: scale(var(--fa-beat-fade-scale, 1.25));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			65% {
+				opacity: calc(var(--fa-beat-fade-opacity, 0.4) + 0.4);
+				transform: scale(var(--fa-beat-fade-scale, 1.28));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			100% {
+				opacity: var(--fa-beat-fade-opacity, 0.4);
+				transform: scale(1);
+			}
+		}
+		@keyframes fa-flip {
+			0% {
+				transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg);
+				animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+			}
+			8% {
+				transform: perspective(2em) scale(var(--fa-flip-anticipation-scale, 0.95)) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg);
+				animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+			}
+			35% {
+				transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * 0.6));
+				animation-timing-function: linear;
+			}
+			65% {
+				transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * 0.5));
+				animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+			}
+			92% {
+				transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * var(--fa-flip-overshoot, 1.04)));
+				animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1);
+			}
+			100% {
+				transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -360deg));
+			}
+		}
+		@keyframes fa-flip-360 {
+			0% {
+				transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg);
+				animation-timing-function: cubic-bezier(0.2, 0, 0.4, 1);
+			}
+			8% {
+				transform: perspective(2em) scale(var(--fa-flip-anticipation-scale, 0.95)) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), 0deg);
+				animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+			}
+			50% {
+				transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * 0.6));
+				animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+			}
+			80% {
+				transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), calc(var(--fa-flip-angle, -360deg) * var(--fa-flip-overshoot, 1.04)));
+				animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1);
+			}
+			100% {
+				transform: perspective(2em) scale(1) rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -360deg));
+			}
+		}
+		@keyframes fa-shake {
+			0% {
+				transform: rotate(0deg);
+				animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
+			}
+			8% {
+				transform: rotate(35deg) translateX(1px);
+				animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+			}
+			20% {
+				transform: rotate(-22deg) translateX(-1px);
+				animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+			}
+			35% {
+				transform: rotate(15deg) translateX(1px);
+				animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+			}
+			50% {
+				transform: rotate(-9deg);
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			65% {
+				transform: rotate(5deg);
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			78% {
+				transform: rotate(-3deg);
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			90% {
+				transform: rotate(1deg);
+				animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+		@keyframes fa-spin {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes fa-spin-snap {
+			0% {
+				transform: rotate(0deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			12% {
+				transform: rotate(60deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			16.67% {
+				transform: rotate(60deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			28.67% {
+				transform: rotate(120deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			33.33% {
+				transform: rotate(120deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			45.33% {
+				transform: rotate(180deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			50% {
+				transform: rotate(180deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			62% {
+				transform: rotate(240deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			66.67% {
+				transform: rotate(240deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			78.67% {
+				transform: rotate(300deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			83.33% {
+				transform: rotate(300deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			95.33% {
+				transform: rotate(360deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes fa-spin-snap-4 {
+			0% {
+				transform: rotate(0deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			15% {
+				transform: rotate(90deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			25% {
+				transform: rotate(90deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			40% {
+				transform: rotate(180deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			50% {
+				transform: rotate(180deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			65% {
+				transform: rotate(270deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			75% {
+				transform: rotate(270deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			90% {
+				transform: rotate(360deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes fa-spin-snap-8 {
+			0% {
+				transform: rotate(0deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			9% {
+				transform: rotate(45deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			12.5% {
+				transform: rotate(45deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			21.5% {
+				transform: rotate(90deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			25% {
+				transform: rotate(90deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			34% {
+				transform: rotate(135deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			37.5% {
+				transform: rotate(135deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			46.5% {
+				transform: rotate(180deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			50% {
+				transform: rotate(180deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			59% {
+				transform: rotate(225deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			62.5% {
+				transform: rotate(225deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			71.5% {
+				transform: rotate(270deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			75% {
+				transform: rotate(270deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			84% {
+				transform: rotate(315deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			87.5% {
+				transform: rotate(315deg);
+				animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+			}
+			96.5% {
+				transform: rotate(360deg);
+				animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes fa-buzz {
+			0% {
+				transform: translateX(0) rotate(0deg);
+				animation-timing-function: cubic-bezier(0.1, 0, 0.9, 1);
+			}
+			5% {
+				transform: translateX(var(--fa-buzz-distance, 4px)) rotate(0.5deg);
+			}
+			10% {
+				transform: translateX(calc(-1 * var(--fa-buzz-distance, 4px))) rotate(-0.5deg);
+			}
+			15% {
+				transform: translateX(var(--fa-buzz-distance, 4px)) rotate(0.3deg);
+			}
+			20% {
+				transform: translateX(calc(-1 * var(--fa-buzz-distance, 4px))) rotate(-0.3deg);
+			}
+			25% {
+				transform: translateX(calc(var(--fa-buzz-distance, 4px) * 0.7)) rotate(0.2deg);
+			}
+			30% {
+				transform: translateX(calc(-1 * var(--fa-buzz-distance, 4px) * 0.7)) rotate(-0.2deg);
+			}
+			35% {
+				transform: translateX(calc(var(--fa-buzz-distance, 4px) * 0.4)) rotate(0.1deg);
+			}
+			40% {
+				transform: translateX(0) rotate(0deg);
+			}
+			100% {
+				transform: translateX(0) rotate(0deg);
+			}
+		}
+		@keyframes fa-wag {
+			0% {
+				transform: rotate(0deg);
+				animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1);
+			}
+			12% {
+				transform: rotate(var(--fa-wag-angle, 12deg));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			24% {
+				transform: rotate(2deg);
+				animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1);
+			}
+			36% {
+				transform: rotate(calc(var(--fa-wag-angle, 12deg) * 0.85));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			48% {
+				transform: rotate(1deg);
+				animation-timing-function: cubic-bezier(0.2, 0, 0.6, 1);
+			}
+			58% {
+				transform: rotate(calc(var(--fa-wag-angle, 12deg) * 0.6));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			68% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+		@keyframes fa-float {
+			0% {
+				transform: translateY(0) translateX(0) rotate(0deg) scale(var(--fa-float-squash-x, 1.02), var(--fa-float-squash-y, 0.98));
+				animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+			}
+			15% {
+				transform: translateY(calc(-0.4 * var(--fa-float-height, 6px))) translateX(var(--fa-float-drift, 1px)) rotate(var(--fa-float-tilt, 1deg)) scale(1, 1);
+				animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+			}
+			35% {
+				transform: translateY(calc(-1 * var(--fa-float-height, 6px))) translateX(0) rotate(0deg) scale(var(--fa-float-stretch-x, 0.98), var(--fa-float-stretch-y, 1.03));
+				animation-timing-function: cubic-bezier(0.5, 0, 0.5, 0);
+			}
+			50% {
+				transform: translateY(calc(-0.92 * var(--fa-float-height, 6px))) translateX(calc(-0.5 * var(--fa-float-drift, 1px))) rotate(calc(-0.5 * var(--fa-float-tilt, 1deg))) scale(0.995, 1.01);
+				animation-timing-function: cubic-bezier(0.33, 0, 0.66, 0.33);
+			}
+			70% {
+				transform: translateY(calc(-0.3 * var(--fa-float-height, 6px))) translateX(calc(-1 * var(--fa-float-drift, 1px))) rotate(calc(-1 * var(--fa-float-tilt, 1deg))) scale(1, 1);
+				animation-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);
+			}
+			90% {
+				transform: translateY(calc(0.05 * var(--fa-float-height, 6px))) translateX(0) rotate(0deg) scale(var(--fa-float-squash-x, 1.02), var(--fa-float-squash-y, 0.98));
+				animation-timing-function: cubic-bezier(0.33, 0, 0.66, 1);
+			}
+			100% {
+				transform: translateY(0) translateX(0) rotate(0deg) scale(var(--fa-float-squash-x, 1.02), var(--fa-float-squash-y, 0.98));
+			}
+		}
+		@keyframes fa-swing {
+			0% {
+				transform: rotate(0deg);
+				animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
+			}
+			8% {
+				transform: rotate(var(--fa-swing-angle, 22deg));
+				animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+			}
+			18% {
+				transform: rotate(calc(-1 * var(--fa-swing-angle, 22deg) * 0.85));
+				animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+			}
+			28% {
+				transform: rotate(calc(var(--fa-swing-angle, 22deg) * 0.65));
+				animation-timing-function: cubic-bezier(0.35, 0, 0.65, 1);
+			}
+			38% {
+				transform: rotate(calc(-1 * var(--fa-swing-angle, 22deg) * 0.45));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			48% {
+				transform: rotate(calc(var(--fa-swing-angle, 22deg) * 0.25));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			56% {
+				transform: rotate(calc(-1 * var(--fa-swing-angle, 22deg) * 0.1));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			64% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(0deg);
+			}
+		}
+		@keyframes fa-jello {
+			0% {
+				transform: scale(1, 1);
+				animation-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
+			}
+			12% {
+				transform: scale(var(--fa-jello-scale-x, 1.15), calc(2 - var(--fa-jello-scale-x, 1.15)));
+				animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+			}
+			24% {
+				transform: scale(calc(2 - var(--fa-jello-scale-y, 1.12)), var(--fa-jello-scale-y, 1.12));
+				animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+			}
+			36% {
+				transform: scale(calc(1 + (var(--fa-jello-scale-x, 1.15) - 1) * 0.5), calc(2 - (1 + (var(--fa-jello-scale-x, 1.15) - 1) * 0.5)));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			48% {
+				transform: scale(calc(2 - (1 + (var(--fa-jello-scale-y, 1.12) - 1) * 0.3)), calc(1 + (var(--fa-jello-scale-y, 1.12) - 1) * 0.3));
+				animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+			}
+			58% {
+				transform: scale(1.02, 0.98);
+				animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+			}
+			68% {
+				transform: scale(1, 1);
+			}
+			100% {
+				transform: scale(1, 1);
+			}
+		}
+		.fa-rotate-90 {
+			transform: rotate(90deg);
+		}
+		
+		.fa-rotate-180 {
+			transform: rotate(180deg);
+		}
+		
+		.fa-rotate-270 {
+			transform: rotate(270deg);
+		}
+		
+		.fa-flip-horizontal {
+			transform: scale(-1, 1);
+		}
+		
+		.fa-flip-vertical {
+			transform: scale(1, -1);
+		}
+		
+		.fa-flip-both,
+		.fa-flip-horizontal.fa-flip-vertical {
+			transform: scale(-1, -1);
+		}
+		
+		.fa-rotate-by {
+			transform: rotate(var(--fa-rotate-angle, 0));
+		}
+		
+		.svg-inline--fa .fa-primary {
+			fill: var(--fa-primary-color, currentColor);
+			opacity: var(--fa-primary-opacity, 1);
+		}
+		
+		.svg-inline--fa .fa-secondary {
+			fill: var(--fa-secondary-color, currentColor);
+			opacity: var(--fa-secondary-opacity, 0.4);
+		}
+		
+		.svg-inline--fa.fa-swap-opacity .fa-primary {
+			opacity: var(--fa-secondary-opacity, 0.4);
+		}
+		
+		.svg-inline--fa.fa-swap-opacity .fa-secondary {
+			opacity: var(--fa-primary-opacity, 1);
+		}
+		
+		.svg-inline--fa mask .fa-primary,
+		.svg-inline--fa mask .fa-secondary {
+			fill: black;
+		}
+		
+		.svg-inline--fa.fa-inverse {
+			fill: var(--fa-inverse, #fff);
+		}
+		
+		.fa-stack {
+			display: inline-block;
+			height: 2em;
+			line-height: 2em;
+			position: relative;
+			vertical-align: middle;
+			width: 2.5em;
+		}
+		
+		.fa-inverse {
+			color: var(--fa-inverse, #fff);
+		}
+		
+		.svg-inline--fa.fa-stack-1x {
+			--fa-width: 1.25em;
+			height: 1em;
+			width: var(--fa-width);
+		}
+		.svg-inline--fa.fa-stack-2x {
+			--fa-width: 2.5em;
+			height: 2em;
+			width: var(--fa-width);
+		}
+		
+		.fa-stack-1x,
+		.fa-stack-2x {
+			inset: 0;
+			margin: auto;
+			position: absolute;
+			z-index: var(--fa-stack-z-index, auto);
+		}</style><link rel="manifest" href="/manifest.json">
+	<meta name="description" content="PluralSpace - A free app for plural systems, DID, and OSDD.">
+	<meta property="og:title" content="PluralSpace">
+	<meta property="og:description" content="PluralSpace - A free app for plural systems, DID, and OSDD.">
+	<meta property="og:image" content="https://assets.pluralspace.app/images/og-default.png">
+	<meta property="og:url" content="https://pluralspace.app/members/00000000-0000-0000-0000-000000000000">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="PluralSpace">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@pluralspaceapp">
+	<meta name="csrf-token" content="P4RTaGkVsbXNL2oXfUm02eXvB2WubASWVMAeP55w">
+
+	<link rel="canonical" href="https://pluralspace.app/members/00000000-0000-0000-0000-000000000000">
+
+	<link rel="icon" href="https://cdn1.pluralspace.app/logos/pluralspace_icon_beta.webp" sizes="any">
+	<link rel="apple-touch-icon" href="https://cdn1.pluralspace.app/logos/pluralspace_icon_beta.webp">
+	<link rel="preconnect" href="https://fonts.bunny.net">
+	<link href="./app.css" rel="stylesheet" defer="">
+
+	<style id="ps-theme-delta">html:root {
+			--radius-card: 0;
+			--radius-field: 0;
+			--radius-button: 0;
+			--radius-xs: 0;
+			--radius-sm: 0;
+			--radius-md: 0;
+			--radius-lg: 0;
+			--radius-xl: 0;
+			--radius-2xl: 0;
+			--radius-3xl: 0;
+			--radius-4xl: 0;
+		}</style>
+	<style>
+		#nprogress {
+			pointer-events: none;
+			background: none;
+			border: none;
+			margin: 0;
+			padding: 0;
+			overflow: visible;
+			inset: unset;
+			width: 100%;
+			height: 0;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
+		
+		#nprogress::backdrop {
+			display: none;
+		}
+		
+		#nprogress .bar {
+			background: #8b5cf6;
+			
+			position: fixed;
+			z-index: 1031;
+			top: 0;
+			left: 0;
+			
+			width: 100%;
+			height: 2px;
+		}
+		
+		#nprogress .peg {
+			display: block;
+			position: absolute;
+			right: 0px;
+			width: 100px;
+			height: 100%;
+			box-shadow: 0 0 10px #8b5cf6, 0 0 5px #8b5cf6;
+			opacity: 1.0;
+			
+			transform: rotate(3deg) translate(0px, -4px);
+		}
+		
+		#nprogress .spinner {
+			display: block;
+			position: fixed;
+			z-index: 1031;
+			top: 15px;
+			right: 15px;
+		}
+		
+		#nprogress .spinner-icon {
+			width: 18px;
+			height: 18px;
+			box-sizing: border-box;
+			
+			border: solid 2px transparent;
+			border-top-color: #8b5cf6;
+			border-left-color: #8b5cf6;
+			border-radius: 50%;
+			
+			animation: nprogress-spinner 400ms linear infinite;
+		}
+		
+		.nprogress-custom-parent {
+			overflow: hidden;
+			position: relative;
+		}
+		
+		.nprogress-custom-parent #nprogress .spinner,
+		.nprogress-custom-parent #nprogress .bar {
+			position: absolute;
+		}
+		
+		@keyframes nprogress-spinner {
+			0%   { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+	</style><title data-inertia="">Dashboard · PluralSpace</title><style id="psqol-panel-style">
+		#psqol-panel {
+			position: fixed;
+			right: 16px;
+			bottom: 16px;
+			z-index: 2147483600;
+			width: 320px;
+			max-width: calc(100vw - 32px);
+			max-height: calc(100vh - 32px);
+			overflow: auto;
+			padding: 14px 16px 12px;
+			border-radius: 12px;
+			font: 13px/1.45 system-ui, sans-serif;
+			/* Self-contained colours rather than the app's theme tokens: the panel must
+			stay legible even if a tweak or a future app change breaks the page.
+			Light is the base and the app's own .dark class on <html> selects dark --
+			following the app beats prefers-color-scheme, which would render a light
+			panel over the dark app whenever the two disagree. */
+			color: #1c1a26;
+			background: #fff;
+			border: 1px solid #d6d2e2;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+		}
+		html.dark #psqol-panel {
+			color: #e8e6f0;
+			background: #191424;
+			border-color: #3a3350;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+		}
+		#psqol-panel h2 {
+			margin: 0 0 2px; font-size: 13px; font-weight: 700; letter-spacing: .02em;
+		}
+		#psqol-panel .psqol-ver { margin: 0 0 10px; opacity: .55; font-size: 11px; }
+		#psqol-panel label {
+			display: grid; grid-template-columns: auto 1fr; gap: 2px 9px;
+			align-items: start; padding: 7px 0; cursor: pointer;
+			border-top: 1px solid rgba(127, 127, 127, .25);
+		}
+		#psqol-panel input { margin: 2px 0 0; cursor: pointer; }
+		#psqol-panel .psqol-desc { grid-column: 2; opacity: .6; font-size: 11.5px; }
+		#psqol-panel .psqol-foot {
+			display: flex; justify-content: space-between; align-items: center;
+			margin-top: 10px; padding-top: 9px;
+			border-top: 1px solid rgba(127, 127, 127, .25);
+			opacity: .6; font-size: 11px;
+		}
+		#psqol-panel button.psqol-close {
+			cursor: pointer; border: 0; border-radius: 6px; padding: 4px 9px;
+			font: inherit; color: inherit; background: rgba(127, 127, 127, .22);
+		}
+	</style><style id="psqol-style">
+		:root { --psqol-panel-w: min(28rem, 34vw); }
+		
+		@media (min-width: 1024px) {
+			/* The drawer sets overflow:hidden inline on <html> as a modal scroll lock,
+			which is no longer appropriate once it is pinned rather than modal.
+			!important is what beats an inline style from a stylesheet. */
+			html:has(aside[aria-labelledby="day-drawer-title"]) { overflow: auto !important; }
+			
+			/* The wrapper is both the dim backdrop and the drawer's positioning context.
+			Shrink it to a right-hand column below the app header, drop the dim, and
+			make it transparent to pointer events -- that last part is also what
+			disables click-outside-to-close, since the handler lives on this element. */
+			#main-content > div:has(> aside[aria-labelledby="day-drawer-title"]) {
+				top: var(--app-header-h, 63px);
+				bottom: 0;
+				right: 0;
+				left: auto;
+				width: var(--psqol-panel-w);
+				background: transparent !important;
+				pointer-events: none;
+			}
+			
+			#main-content aside[aria-labelledby="day-drawer-title"] {
+				pointer-events: auto;
+				inset: 0;
+				width: 100%;
+				max-width: none;
+				box-shadow: none;
+			}
+			
+			/* Reserve the column so the calendar shrinks rather than hiding underneath. */
+			#main-content:has(aside[aria-labelledby="day-drawer-title"]) {
+				padding-right: calc(var(--psqol-panel-w) + 1.5rem);
+			}
+		}
+	</style>
+</head>
+<body class="pixel-bg min-h-dvh bg-bg antialiased" style="">
+	<div id="app" data-v-app=""><!----><div data-v-3eedf900="" class="pixel-bg min-h-dvh bg-bg text-text antialiased"><a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:border focus:border-accent focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-text-heading focus:shadow-lg">Skip to content</a><aside class="fixed inset-y-0 left-0 z-40 hidden flex-col overflow-y-auto border-r border-border bg-bg-2 pb-6 pt-[max(1.5rem,env(safe-area-inset-top))] transition-[width,padding] duration-200 lg:flex w-72 px-5"><div class="mb-6 flex gap-2 items-center"><a class="flex min-w-0 items-center no-underline flex-1" href="https://pluralspace.app/space"><div class="flex w-full items-center gap-2.5 no-underline"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="shrink-0 rounded-sm" alt="Avatar" style="width: 32px; height: 32px;"><span class="font-display min-w-0 flex-1 whitespace-nowrap text-text-heading leading-none" style="font-size: 17px; letter-spacing: 1px;">
+		PluralSpace
+	</span></div></a><button type="button" class="inline-flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-md text-text-muted transition hover:bg-surface hover:text-text" aria-label="Collapse sidebar"><svg class="svg-inline--fa fa-chevron-left" data-prefix="fas" data-icon="chevron-left" role="img" viewBox="0 0 320 512" aria-hidden="true"><path class="" fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path></svg></button></div><div class="mb-4 w-full"><span class="outline-none flex w-full" id="reka-dropdown-menu-trigger-v-104" aria-haspopup="menu" aria-expanded="false" disabled="false" data-state="closed"><button type="button" class="grid w-full cursor-pointer grid-cols-1 rounded-lg border border-border bg-surface py-1.5 pr-2 pl-3 text-left text-text transition hover:border-accent/60"><span class="col-start-1 row-start-1 flex items-center gap-3 pr-6"><span class="size-5 shrink-0 overflow-hidden rounded-avatar" style="background-color: rgb(139, 94, 215);"><img class="size-full rounded-avatar object-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></span><span class="block truncate text-sm">Member N.sys</span></span><svg class="svg-inline--fa fa-chevron-down col-start-1 row-start-1 self-center justify-self-end text-text-muted transition-transform" data-prefix="fas" data-icon="chevron-down" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></button></span></div><nav class="grid gap-1 mt-2"><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline bg-accent/15 text-accent" href="https://pluralspace.app/space"><svg class="svg-inline--fa fa-grid shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="grid" role="img" viewBox="0 0 448 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32l48 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32L0 64zM0 232c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48zM112 400l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32zM168 64c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48zM280 232l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32zM168 400c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48zM448 64l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32zM336 232c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48zM448 400l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Dashboard</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/members"><svg class="svg-inline--fa fa-users shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="users" role="img" viewBox="0 0 640 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M320 16a104 104 0 1 1 0 208 104 104 0 1 1 0-208zM96 88a72 72 0 1 1 0 144 72 72 0 1 1 0-144zM0 416c0-70.7 57.3-128 128-128 12.8 0 25.2 1.9 36.9 5.4-32.9 36.8-52.9 85.4-52.9 138.6l0 16c0 11.4 2.4 22.2 6.7 32L32 480c-17.7 0-32-14.3-32-32l0-32zm521.3 64c4.3-9.8 6.7-20.6 6.7-32l0-16c0-53.2-20-101.8-52.9-138.6 11.7-3.5 24.1-5.4 36.9-5.4 70.7 0 128 57.3 128 128l0 32c0 17.7-14.3 32-32 32l-86.7 0zM472 160a72 72 0 1 1 144 0 72 72 0 1 1 -144 0zM160 432c0-88.4 71.6-160 160-160s160 71.6 160 160l0 16c0 17.7-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32l0-16z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Headmates</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/space/fronts"><svg class="svg-inline--fa fa-calendar shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="calendar" role="img" viewBox="0 0 448 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M128 0C110.3 0 96 14.3 96 32l0 32-32 0C28.7 64 0 92.7 0 128l0 48 448 0 0-48c0-35.3-28.7-64-64-64l-32 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32-128 0 0-32c0-17.7-14.3-32-32-32zM0 224L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-192-448 0z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Fronting History</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/members/map"><svg class="svg-inline--fa fa-map shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="map" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M512 48c0-11.1-5.7-21.4-15.2-27.2s-21.2-6.4-31.1-1.4L349.5 77.5 170.1 17.6c-8.1-2.7-16.8-2.1-24.4 1.7l-128 64C6.8 88.8 0 99.9 0 112L0 464c0 11.1 5.7 21.4 15.2 27.2s21.2 6.4 31.1 1.4l116.1-58.1 179.4 59.8c8.1 2.7 16.8 2.1 24.4-1.7l128-64c10.8-5.4 17.7-16.5 17.7-28.6l0-352zM192 376.9l0-284.5 128 42.7 0 284.5-128-42.7z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">System Map</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/innerworld"><svg class="svg-inline--fa fa-map-location-dot shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="map-location-dot" role="img" viewBox="0 0 640 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M576 48c0-11.1-5.7-21.4-15.2-27.2s-21.2-6.4-31.1-1.4L413.5 77.5 234.1 17.6c-8.1-2.7-16.8-2.1-24.4 1.7l-128 64C70.8 88.8 64 99.9 64 112l0 352c0 11.1 5.7 21.4 15.2 27.2s21.2 6.4 31.1 1.4l116.1-58.1 173.3 57.8c-4.3-6.4-8.5-13.1-12.6-19.9-11-18.3-21.9-39.3-30-61.8l-101.2-33.7 0-284.5 128 42.7 0 99.3c31-35.8 77-58.4 128-58.4 22.6 0 44.2 4.4 64 12.5L576 48zM512 224c-66.3 0-120 52.8-120 117.9 0 68.9 64.1 150.4 98.6 189.3 11.6 13 31.3 13 42.9 0 34.5-38.9 98.6-120.4 98.6-189.3 0-65.1-53.7-117.9-120-117.9zM472 344a40 40 0 1 1 80 0 40 40 0 1 1 -80 0z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Headspace</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/journal"><svg class="svg-inline--fa fa-book-open shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="book-open" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M256 141.3l0 309.3 .5-.2C311.1 427.7 369.7 416 428.8 416l19.2 0 0-320-19.2 0c-42.2 0-84.1 8.4-123.1 24.6-16.8 7-33.4 13.9-49.7 20.7zM230.9 61.5L256 72 281.1 61.5C327.9 42 378.1 32 428.8 32L464 32c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-35.2 0c-50.7 0-100.9 10-147.7 29.5l-12.8 5.3c-7.9 3.3-16.7 3.3-24.6 0l-12.8-5.3C184.1 490 133.9 480 83.2 480L48 480c-26.5 0-48-21.5-48-48L0 80C0 53.5 21.5 32 48 32l35.2 0c50.7 0 100.9 10 147.7 29.5z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Journals</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/polls"><svg class="svg-inline--fa fa-square-check shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="square-check" role="img" viewBox="0 0 448 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM342 145.7c-10.7-7.8-25.7-5.4-33.5 5.3L189.1 315.2 137 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.9 7.5 18.8 7s13.4-4.1 17.5-9.8L347.3 179.2c7.8-10.7 5.4-25.7-5.3-33.5z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Polls</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/stats"><svg class="svg-inline--fa fa-chart-column shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="chart-column" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M32 32c17.7 0 32 14.3 32 32l0 336c0 8.8 7.2 16 16 16l400 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L80 480c-44.2 0-80-35.8-80-80L0 64C0 46.3 14.3 32 32 32zM144 224c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32zm144-64l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160c0-17.7 14.3-32 32-32s32 14.3 32 32zm80 32c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96c0-17.7 14.3-32 32-32zM512 96l0 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-224c0-17.7 14.3-32 32-32s32 14.3 32 32z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">System Insights</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/activity"><svg class="svg-inline--fa fa-clock shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="clock" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Activity</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/system/settings"><svg class="svg-inline--fa fa-gear shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="gear" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M195.1 9.5C198.1-5.3 211.2-16 226.4-16l59.8 0c15.2 0 28.3 10.7 31.3 25.5L332 79.5c14.1 6 27.3 13.7 39.3 22.8l67.8-22.5c14.4-4.8 30.2 1.2 37.8 14.4l29.9 51.8c7.6 13.2 4.9 29.8-6.5 39.9L447 233.3c.9 7.4 1.3 15 1.3 22.7s-.5 15.3-1.3 22.7l53.4 47.5c11.4 10.1 14 26.8 6.5 39.9l-29.9 51.8c-7.6 13.1-23.4 19.2-37.8 14.4l-67.8-22.5c-12.1 9.1-25.3 16.7-39.3 22.8l-14.4 69.9c-3.1 14.9-16.2 25.5-31.3 25.5l-59.8 0c-15.2 0-28.3-10.7-31.3-25.5l-14.4-69.9c-14.1-6-27.2-13.7-39.3-22.8L73.5 432.3c-14.4 4.8-30.2-1.2-37.8-14.4L5.8 366.1c-7.6-13.2-4.9-29.8 6.5-39.9l53.4-47.5c-.9-7.4-1.3-15-1.3-22.7s.5-15.3 1.3-22.7L12.3 185.8c-11.4-10.1-14-26.8-6.5-39.9L35.7 94.1c7.6-13.2 23.4-19.2 37.8-14.4l67.8 22.5c12.1-9.1 25.3-16.7 39.3-22.8L195.1 9.5zM256.3 336a80 80 0 1 0 -.6-160 80 80 0 1 0 .6 160z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">System Settings</span><!----></a></nav><div class="mt-auto space-y-3"><div class="rounded-lg border border-accent/40 bg-accent/10 px-3 py-2.5 text-xs text-accent"><span class="font-bold uppercase tracking-wider">Beta</span>
+	- Expect bugs and missing features. <a href="https://feedback.pluralspace.app" target="_blank" rel="noopener" class="underline hover:text-accent/80">Share feedback!</a></div><nav class="grid gap-1 text-sm"><button type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed" class="flex w-full cursor-pointer items-center gap-3 rounded-md px-3 py-2.5 text-left text-sm text-text-secondary outline-none transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-sparkles shrink-0 fa-lg" data-prefix="fas" data-icon="sparkles" role="img" viewBox="0 0 576 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M391.5 53.2c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L448 96 469.2 152.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L512 96 568.5 74.8c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L512 32 490.8-24.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L448 32 391.5 53.2zm-185 20.1c-2.6-5.7-8.3-9.3-14.5-9.3s-11.9 3.6-14.5 9.3l-53.1 115-115 53.1C3.6 244.1 0 249.8 0 256s3.6 11.9 9.3 14.5l115 53.1 53.1 115c2.6 5.7 8.3 9.3 14.5 9.3s11.9-3.6 14.5-9.3l53.1-115 115-53.1c5.7-2.6 9.3-8.3 9.3-14.5s-3.6-11.9-9.3-14.5l-115-53.1-53.1-115zM416 416l-56.5 21.2c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 480 437.2 536.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 480 536.5 458.8c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 416 458.8 359.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 416z"></path></svg><span class="flex-1">What's new?</span><span class="size-2 shrink-0 rounded-full bg-accent" aria-hidden="true"></span></button><a href="https://support.pluralspace.app" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-md px-3 py-2.5 text-text-secondary no-underline transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-graduation-cap shrink-0 fa-lg" data-prefix="fas" data-icon="graduation-cap" role="img" viewBox="0 0 576 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M48 195.8l209.2 86.1c9.8 4 20.2 6.1 30.8 6.1s21-2.1 30.8-6.1l242.4-99.8c9-3.7 14.8-12.4 14.8-22.1s-5.8-18.4-14.8-22.1L318.8 38.1C309 34.1 298.6 32 288 32s-21 2.1-30.8 6.1L14.8 137.9C5.8 141.6 0 150.3 0 160L0 456c0 13.3 10.7 24 24 24s24-10.7 24-24l0-260.2zm48 71.7L96 384c0 53 86 96 192 96s192-43 192-96l0-116.6-142.9 58.9c-15.6 6.4-32.2 9.7-49.1 9.7s-33.5-3.3-49.1-9.7L96 267.4z"></path></svg>
+	Knowledge Base</a><a href="https://feedback.pluralspace.app" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-md px-3 py-2.5 text-text-secondary no-underline transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-bullhorn shrink-0 fa-lg" data-prefix="fas" data-icon="bullhorn" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M461.2 18.9C472.7 24 480 35.4 480 48l0 416c0 12.6-7.3 24-18.8 29.1s-24.8 3.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63l0 95.7c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-96C57.3 384 0 326.7 0 256S57.3 128 128 128l84.5 0c61.8-.2 121.4-22.7 167.9-63.3l46.6-40.7c9.4-8.3 22.9-10.2 34.3-5.1zM224 320l0 .2c70.3 2.7 137.8 28.5 192 73.4l0-275.3c-54.2 44.9-121.7 70.7-192 73.4L224 320z"></path></svg>
+	Feedback Portal</a><a href="https://status.pluralspace.app" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-md px-3 py-2.5 text-text-secondary no-underline transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-gauge-high shrink-0 fa-lg" data-prefix="fas" data-icon="gauge-high" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM256 416c35.3 0 64-28.7 64-64 0-16.2-6-31.1-16-42.3l69.5-138.9c5.9-11.9 1.1-26.3-10.7-32.2s-26.3-1.1-32.2 10.7L261.1 288.2c-1.7-.1-3.4-.2-5.1-.2-35.3 0-64 28.7-64 64s28.7 64 64 64zM176 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM96 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm352-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
+	Status</a><div class="mt-1 flex gap-1 pt-1 items-center px-3 mx-auto"><span class="inline-flex" data-state="closed" data-grace-area-trigger=""><a href="https://patreon.com/PluralSpace" target="_blank" rel="noopener" aria-label="Patreon" class="inline-flex size-9 items-center justify-center rounded-md text-text-muted transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-patreon fa-lg" data-prefix="fab" data-icon="patreon" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M490 153.8c-.1-65.4-51-119-110.7-138.3-74.2-24-172-20.5-242.9 12.9-85.8 40.5-112.8 129.3-113.8 217.8-.8 72.8 6.4 264.4 114.6 265.8 80.3 1 92.3-102.5 129.5-152.3 26.4-35.5 60.5-45.5 102.4-55.9 72-17.8 121.1-74.7 121-150l-.1 0z"></path></svg></a></span><span class="inline-flex" data-state="closed" data-grace-area-trigger=""><a href="https://discord.gg/pluralspace" target="_blank" rel="noopener" aria-label="Discord" class="inline-flex size-9 items-center justify-center rounded-md text-text-muted transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-discord fa-lg" data-prefix="fab" data-icon="discord" role="img" viewBox="0 0 576 512" aria-hidden="true"><path class="" fill="currentColor" d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1 .1s-.6 .4-.8 .8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2c-41.3 7.1-81.6 19.6-119.7 37.1-.3 .1-.6 .4-.8 .7-76.2 113.8-97.1 224.9-86.9 334.5 0 .3 .1 .5 .2 .8s.3 .4 .5 .6c44.4 32.9 94 58 146.8 74.2 .4 .1 .8 .1 1.1 0s.7-.4 .9-.7c11.3-15.4 21.4-31.8 30-48.8 .1-.2 .2-.5 .2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6 .2-.9 .3-.5 .6-.7c3.1-2.3 6.2-4.7 9.1-7.1 .3-.2 .6-.4 .9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1 .7-.2 1-.2s.7 .2 .9 .4c2.9 2.4 6 4.9 9.1 7.2 .2 .2 .4 .4 .6 .7s.2 .6 .2 .9-.1 .6-.3 .9-.4 .5-.6 .6c-14.7 8.6-30 15.9-45.9 21.8-.2 .1-.5 .2-.7 .4s-.3 .4-.4 .7-.1 .5-.1 .8 .1 .5 .2 .8c8.8 17 18.8 33.3 30 48.8 .2 .3 .6 .6 .9 .7s.8 .1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2 .2-.2 .4-.4 .5-.6s.2-.5 .2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2zm195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2z"></path></svg></a></span><span class="inline-flex" data-state="closed" data-grace-area-trigger=""><a href="https://x.com/PluralSpaceApp" target="_blank" rel="noopener" aria-label="X" class="inline-flex size-9 items-center justify-center rounded-md text-text-muted transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-x-twitter fa-lg" data-prefix="fab" data-icon="x-twitter" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z"></path></svg></a></span></div></nav></div></aside><!----><aside role="dialog" aria-modal="true" aria-label="Navigation" class="fixed inset-y-0 left-0 z-50 flex w-72 flex-col overflow-y-auto border-r border-border bg-bg-2 px-5 pb-6 pt-[max(1.5rem,env(safe-area-inset-top))] lg:hidden" style="display: none;"><div class="mb-6 flex items-center justify-between"><a class="no-underline" href="https://pluralspace.app/space"><div class="flex w-full items-center gap-2.5 no-underline"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="shrink-0 rounded-sm" alt="Avatar" style="width: 32px; height: 32px;"><span class="font-display min-w-0 flex-1 whitespace-nowrap text-text-heading leading-none" style="font-size: 18px; letter-spacing: 1px;">
+		PluralSpace
+	</span></div></a><button type="button" class="inline-flex size-11 cursor-pointer items-center justify-center rounded text-text-muted transition hover:text-text" aria-label="Close"><svg class="svg-inline--fa fa-xmark" data-prefix="fas" data-icon="xmark" role="img" viewBox="0 0 384 512" aria-hidden="true"><path class="" fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"></path></svg></button></div><div class="mb-4 w-full"><span class="outline-none flex w-full" id="reka-dropdown-menu-trigger-v-109" aria-haspopup="menu" aria-expanded="false" disabled="false" data-state="closed"><button type="button" class="grid w-full cursor-pointer grid-cols-1 rounded-lg border border-border bg-surface py-1.5 pr-2 pl-3 text-left text-text transition hover:border-accent/60"><span class="col-start-1 row-start-1 flex items-center gap-3 pr-6"><span class="size-5 shrink-0 overflow-hidden rounded-avatar" style="background-color: rgb(139, 94, 215);"><img class="size-full rounded-avatar object-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></span><span class="block truncate text-sm">Member N.sys</span></span><svg class="svg-inline--fa fa-chevron-down col-start-1 row-start-1 self-center justify-self-end text-text-muted transition-transform" data-prefix="fas" data-icon="chevron-down" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></button></span></div><nav class="grid gap-1 mt-2"><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline bg-accent/15 text-accent" href="https://pluralspace.app/space"><svg class="svg-inline--fa fa-grid shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="grid" role="img" viewBox="0 0 448 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32l48 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32L0 64zM0 232c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48zM112 400l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32zM168 64c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48zM280 232l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32zM168 400c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48zM448 64l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32zM336 232c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48zM448 400l0 48c0 17.7-14.3 32-32 32l-48 0c-17.7 0-32-14.3-32-32l0-48c0-17.7 14.3-32 32-32l48 0c17.7 0 32 14.3 32 32z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Dashboard</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/members"><svg class="svg-inline--fa fa-users shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="users" role="img" viewBox="0 0 640 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M320 16a104 104 0 1 1 0 208 104 104 0 1 1 0-208zM96 88a72 72 0 1 1 0 144 72 72 0 1 1 0-144zM0 416c0-70.7 57.3-128 128-128 12.8 0 25.2 1.9 36.9 5.4-32.9 36.8-52.9 85.4-52.9 138.6l0 16c0 11.4 2.4 22.2 6.7 32L32 480c-17.7 0-32-14.3-32-32l0-32zm521.3 64c4.3-9.8 6.7-20.6 6.7-32l0-16c0-53.2-20-101.8-52.9-138.6 11.7-3.5 24.1-5.4 36.9-5.4 70.7 0 128 57.3 128 128l0 32c0 17.7-14.3 32-32 32l-86.7 0zM472 160a72 72 0 1 1 144 0 72 72 0 1 1 -144 0zM160 432c0-88.4 71.6-160 160-160s160 71.6 160 160l0 16c0 17.7-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32l0-16z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Headmates</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/space/fronts"><svg class="svg-inline--fa fa-calendar shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="calendar" role="img" viewBox="0 0 448 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M128 0C110.3 0 96 14.3 96 32l0 32-32 0C28.7 64 0 92.7 0 128l0 48 448 0 0-48c0-35.3-28.7-64-64-64l-32 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32-128 0 0-32c0-17.7-14.3-32-32-32zM0 224L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-192-448 0z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Fronting History</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/members/map"><svg class="svg-inline--fa fa-map shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="map" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M512 48c0-11.1-5.7-21.4-15.2-27.2s-21.2-6.4-31.1-1.4L349.5 77.5 170.1 17.6c-8.1-2.7-16.8-2.1-24.4 1.7l-128 64C6.8 88.8 0 99.9 0 112L0 464c0 11.1 5.7 21.4 15.2 27.2s21.2 6.4 31.1 1.4l116.1-58.1 179.4 59.8c8.1 2.7 16.8 2.1 24.4-1.7l128-64c10.8-5.4 17.7-16.5 17.7-28.6l0-352zM192 376.9l0-284.5 128 42.7 0 284.5-128-42.7z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">System Map</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/innerworld"><svg class="svg-inline--fa fa-map-location-dot shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="map-location-dot" role="img" viewBox="0 0 640 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M576 48c0-11.1-5.7-21.4-15.2-27.2s-21.2-6.4-31.1-1.4L413.5 77.5 234.1 17.6c-8.1-2.7-16.8-2.1-24.4 1.7l-128 64C70.8 88.8 64 99.9 64 112l0 352c0 11.1 5.7 21.4 15.2 27.2s21.2 6.4 31.1 1.4l116.1-58.1 173.3 57.8c-4.3-6.4-8.5-13.1-12.6-19.9-11-18.3-21.9-39.3-30-61.8l-101.2-33.7 0-284.5 128 42.7 0 99.3c31-35.8 77-58.4 128-58.4 22.6 0 44.2 4.4 64 12.5L576 48zM512 224c-66.3 0-120 52.8-120 117.9 0 68.9 64.1 150.4 98.6 189.3 11.6 13 31.3 13 42.9 0 34.5-38.9 98.6-120.4 98.6-189.3 0-65.1-53.7-117.9-120-117.9zM472 344a40 40 0 1 1 80 0 40 40 0 1 1 -80 0z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Headspace</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/journal"><svg class="svg-inline--fa fa-book-open shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="book-open" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M256 141.3l0 309.3 .5-.2C311.1 427.7 369.7 416 428.8 416l19.2 0 0-320-19.2 0c-42.2 0-84.1 8.4-123.1 24.6-16.8 7-33.4 13.9-49.7 20.7zM230.9 61.5L256 72 281.1 61.5C327.9 42 378.1 32 428.8 32L464 32c26.5 0 48 21.5 48 48l0 352c0 26.5-21.5 48-48 48l-35.2 0c-50.7 0-100.9 10-147.7 29.5l-12.8 5.3c-7.9 3.3-16.7 3.3-24.6 0l-12.8-5.3C184.1 490 133.9 480 83.2 480L48 480c-26.5 0-48-21.5-48-48L0 80C0 53.5 21.5 32 48 32l35.2 0c50.7 0 100.9 10 147.7 29.5z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Journals</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/polls"><svg class="svg-inline--fa fa-square-check shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="square-check" role="img" viewBox="0 0 448 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM342 145.7c-10.7-7.8-25.7-5.4-33.5 5.3L189.1 315.2 137 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.9 7.5 18.8 7s13.4-4.1 17.5-9.8L347.3 179.2c7.8-10.7 5.4-25.7-5.3-33.5z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Polls</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/stats"><svg class="svg-inline--fa fa-chart-column shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="chart-column" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M32 32c17.7 0 32 14.3 32 32l0 336c0 8.8 7.2 16 16 16l400 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L80 480c-44.2 0-80-35.8-80-80L0 64C0 46.3 14.3 32 32 32zM144 224c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32zm144-64l0 160c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-160c0-17.7 14.3-32 32-32s32 14.3 32 32zm80 32c17.7 0 32 14.3 32 32l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-96c0-17.7 14.3-32 32-32zM512 96l0 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-224c0-17.7 14.3-32 32-32s32 14.3 32 32z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">System Insights</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/activity"><svg class="svg-inline--fa fa-clock shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="clock" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">Activity</span><!----></a><a class="flex items-center gap-3 rounded-md px-3 py-2.5 font-medium transition no-underline text-text-secondary hover:bg-surface hover:text-text" href="https://pluralspace.app/system/settings"><svg class="svg-inline--fa fa-gear shrink-0" style="font-size: calc(1.25em * var(--density, 1));" data-prefix="fas" data-icon="gear" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M195.1 9.5C198.1-5.3 211.2-16 226.4-16l59.8 0c15.2 0 28.3 10.7 31.3 25.5L332 79.5c14.1 6 27.3 13.7 39.3 22.8l67.8-22.5c14.4-4.8 30.2 1.2 37.8 14.4l29.9 51.8c7.6 13.2 4.9 29.8-6.5 39.9L447 233.3c.9 7.4 1.3 15 1.3 22.7s-.5 15.3-1.3 22.7l53.4 47.5c11.4 10.1 14 26.8 6.5 39.9l-29.9 51.8c-7.6 13.1-23.4 19.2-37.8 14.4l-67.8-22.5c-12.1 9.1-25.3 16.7-39.3 22.8l-14.4 69.9c-3.1 14.9-16.2 25.5-31.3 25.5l-59.8 0c-15.2 0-28.3-10.7-31.3-25.5l-14.4-69.9c-14.1-6-27.2-13.7-39.3-22.8L73.5 432.3c-14.4 4.8-30.2-1.2-37.8-14.4L5.8 366.1c-7.6-13.2-4.9-29.8 6.5-39.9l53.4-47.5c-.9-7.4-1.3-15-1.3-22.7s.5-15.3 1.3-22.7L12.3 185.8c-11.4-10.1-14-26.8-6.5-39.9L35.7 94.1c7.6-13.2 23.4-19.2 37.8-14.4l67.8 22.5c12.1-9.1 25.3-16.7 39.3-22.8L195.1 9.5zM256.3 336a80 80 0 1 0 -.6-160 80 80 0 1 0 .6 160z"></path></svg><span class="block min-w-0 flex-1 truncate whitespace-nowrap" style="font-size: 14px;">System Settings</span><!----></a></nav><div class="mt-auto space-y-3"><div class="rounded-lg border border-accent/40 bg-accent/10 px-3 py-2.5 text-xs text-accent"><span class="font-bold uppercase tracking-wider">Beta</span>
+	- Expect bugs and missing features. <a href="https://feedback.pluralspace.app" target="_blank" rel="noopener" class="underline hover:text-accent/80">Share feedback!</a></div><nav class="grid gap-1 text-sm"><button type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed" class="flex w-full cursor-pointer items-center gap-3 rounded-md px-3 py-2.5 text-left text-sm text-text-secondary outline-none transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-sparkles shrink-0 fa-lg" data-prefix="fas" data-icon="sparkles" role="img" viewBox="0 0 576 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M391.5 53.2c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L448 96 469.2 152.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L512 96 568.5 74.8c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L512 32 490.8-24.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L448 32 391.5 53.2zm-185 20.1c-2.6-5.7-8.3-9.3-14.5-9.3s-11.9 3.6-14.5 9.3l-53.1 115-115 53.1C3.6 244.1 0 249.8 0 256s3.6 11.9 9.3 14.5l115 53.1 53.1 115c2.6 5.7 8.3 9.3 14.5 9.3s11.9-3.6 14.5-9.3l53.1-115 115-53.1c5.7-2.6 9.3-8.3 9.3-14.5s-3.6-11.9-9.3-14.5l-115-53.1-53.1-115zM416 416l-56.5 21.2c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 480 437.2 536.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 480 536.5 458.8c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 416 458.8 359.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 416z"></path></svg><span class="flex-1">What's new?</span><span class="size-2 shrink-0 rounded-full bg-accent" aria-hidden="true"></span></button><a href="https://support.pluralspace.app" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-md px-3 py-2.5 text-text-secondary no-underline transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-graduation-cap shrink-0 fa-lg" data-prefix="fas" data-icon="graduation-cap" role="img" viewBox="0 0 576 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M48 195.8l209.2 86.1c9.8 4 20.2 6.1 30.8 6.1s21-2.1 30.8-6.1l242.4-99.8c9-3.7 14.8-12.4 14.8-22.1s-5.8-18.4-14.8-22.1L318.8 38.1C309 34.1 298.6 32 288 32s-21 2.1-30.8 6.1L14.8 137.9C5.8 141.6 0 150.3 0 160L0 456c0 13.3 10.7 24 24 24s24-10.7 24-24l0-260.2zm48 71.7L96 384c0 53 86 96 192 96s192-43 192-96l0-116.6-142.9 58.9c-15.6 6.4-32.2 9.7-49.1 9.7s-33.5-3.3-49.1-9.7L96 267.4z"></path></svg>
+	Knowledge Base</a><a href="https://feedback.pluralspace.app" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-md px-3 py-2.5 text-text-secondary no-underline transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-bullhorn shrink-0 fa-lg" data-prefix="fas" data-icon="bullhorn" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M461.2 18.9C472.7 24 480 35.4 480 48l0 416c0 12.6-7.3 24-18.8 29.1s-24.8 3.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63l0 95.7c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-96C57.3 384 0 326.7 0 256S57.3 128 128 128l84.5 0c61.8-.2 121.4-22.7 167.9-63.3l46.6-40.7c9.4-8.3 22.9-10.2 34.3-5.1zM224 320l0 .2c70.3 2.7 137.8 28.5 192 73.4l0-275.3c-54.2 44.9-121.7 70.7-192 73.4L224 320z"></path></svg>
+	Feedback Portal</a><a href="https://status.pluralspace.app" target="_blank" rel="noopener" class="flex items-center gap-3 rounded-md px-3 py-2.5 text-text-secondary no-underline transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-gauge-high shrink-0 fa-lg" data-prefix="fas" data-icon="gauge-high" role="img" viewBox="0 0 512 512" aria-hidden="true" fixed=""><path class="" fill="currentColor" d="M0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM256 416c35.3 0 64-28.7 64-64 0-16.2-6-31.1-16-42.3l69.5-138.9c5.9-11.9 1.1-26.3-10.7-32.2s-26.3-1.1-32.2 10.7L261.1 288.2c-1.7-.1-3.4-.2-5.1-.2-35.3 0-64 28.7-64 64s28.7 64 64 64zM176 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM96 288a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm352-32a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"></path></svg>
+	Status</a><div class="mt-1 flex gap-1 pt-1 items-center px-3 mx-auto"><span class="inline-flex" data-state="closed" data-grace-area-trigger=""><a href="https://patreon.com/PluralSpace" target="_blank" rel="noopener" aria-label="Patreon" class="inline-flex size-9 items-center justify-center rounded-md text-text-muted transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-patreon fa-lg" data-prefix="fab" data-icon="patreon" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M490 153.8c-.1-65.4-51-119-110.7-138.3-74.2-24-172-20.5-242.9 12.9-85.8 40.5-112.8 129.3-113.8 217.8-.8 72.8 6.4 264.4 114.6 265.8 80.3 1 92.3-102.5 129.5-152.3 26.4-35.5 60.5-45.5 102.4-55.9 72-17.8 121.1-74.7 121-150l-.1 0z"></path></svg></a></span><span class="inline-flex" data-state="closed" data-grace-area-trigger=""><a href="https://discord.gg/pluralspace" target="_blank" rel="noopener" aria-label="Discord" class="inline-flex size-9 items-center justify-center rounded-md text-text-muted transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-discord fa-lg" data-prefix="fab" data-icon="discord" role="img" viewBox="0 0 576 512" aria-hidden="true"><path class="" fill="currentColor" d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1 .1s-.6 .4-.8 .8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2c-41.3 7.1-81.6 19.6-119.7 37.1-.3 .1-.6 .4-.8 .7-76.2 113.8-97.1 224.9-86.9 334.5 0 .3 .1 .5 .2 .8s.3 .4 .5 .6c44.4 32.9 94 58 146.8 74.2 .4 .1 .8 .1 1.1 0s.7-.4 .9-.7c11.3-15.4 21.4-31.8 30-48.8 .1-.2 .2-.5 .2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6 .2-.9 .3-.5 .6-.7c3.1-2.3 6.2-4.7 9.1-7.1 .3-.2 .6-.4 .9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1 .7-.2 1-.2s.7 .2 .9 .4c2.9 2.4 6 4.9 9.1 7.2 .2 .2 .4 .4 .6 .7s.2 .6 .2 .9-.1 .6-.3 .9-.4 .5-.6 .6c-14.7 8.6-30 15.9-45.9 21.8-.2 .1-.5 .2-.7 .4s-.3 .4-.4 .7-.1 .5-.1 .8 .1 .5 .2 .8c8.8 17 18.8 33.3 30 48.8 .2 .3 .6 .6 .9 .7s.8 .1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2 .2-.2 .4-.4 .5-.6s.2-.5 .2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2zm195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2z"></path></svg></a></span><span class="inline-flex" data-state="closed" data-grace-area-trigger=""><a href="https://x.com/PluralSpaceApp" target="_blank" rel="noopener" aria-label="X" class="inline-flex size-9 items-center justify-center rounded-md text-text-muted transition hover:bg-surface hover:text-text"><svg class="svg-inline--fa fa-x-twitter fa-lg" data-prefix="fab" data-icon="x-twitter" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z"></path></svg></a></span></div></nav></div></aside><div class="transition-[padding] duration-200 lg:pl-72"><header class="sticky top-0 z-30 flex flex-col border-b border-border bg-bg/80 pt-[env(safe-area-inset-top)] backdrop-blur-md"><!----><div class="flex items-center gap-3 px-4 py-3 lg:px-8"><button type="button" class="flex shrink-0 cursor-pointer items-center justify-center rounded-lg border border-border bg-surface p-2 text-sm text-text-muted transition hover:text-text lg:hidden" aria-label="Open navigation"><svg class="svg-inline--fa fa-bars" data-prefix="fas" data-icon="bars" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"></path></svg></button><button type="button" class="flex shrink-0 cursor-pointer items-center gap-2 rounded-lg border border-border bg-surface p-2 text-left text-sm text-text-muted transition hover:text-text sm:max-w-xs sm:flex-1 sm:px-3 sm:py-2" aria-label="Search"><svg class="svg-inline--fa fa-magnifying-glass shrink-0" data-prefix="fas" data-icon="magnifying-glass" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376C296.3 401.1 253.9 416 208 416 93.1 416 0 322.9 0 208S93.1 0 208 0 416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg><span class="hidden flex-1 truncate sm:inline">Search</span><kbd class="hidden shrink-0 rounded border border-border bg-bg-2 px-1.5 py-0.5 font-sans text-[10px] text-text-faint sm:inline-block">Ctrl K</kbd></button><div class="flex-1"></div><div data-tour="current-member-selector" class="flex items-center"><div dir="ltr"><button type="button" tabindex="-1" aria-label="Select headmate…" aria-haspopup="listbox" aria-expanded="false" aria-controls="reka-combobox-content-v-119" data-state="closed" aria-disabled="false" class="flex shrink-0 cursor-pointer items-center gap-1.5 px-1 py-1.5 text-xs text-text-muted transition-colors hover:text-text-secondary"><span class="flex size-5 shrink-0 items-center justify-center overflow-hidden rounded-avatar text-[10px] font-bold text-white lg:hidden" style="background-color: rgb(143, 162, 247);"><img class="size-full rounded-avatar object-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""></span><span class="uppercase tracking-wider max-lg:hidden">headmate</span><span class="max-w-[10rem] truncate rounded-md bg-accent px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent-foreground max-lg:hidden">Member O</span><svg class="svg-inline--fa fa-chevron-down transition-transform max-lg:hidden" data-prefix="fas" data-icon="chevron-down" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></button><!--v-if--></div></div><span class="hidden h-5 w-px shrink-0 bg-border/60 lg:block" aria-hidden="true"></span><span class="outline-none inline-flex" id="reka-dropdown-menu-trigger-v-114" aria-haspopup="menu" aria-expanded="false" disabled="false" data-state="closed"><button type="button" aria-label="Appearance" class="flex shrink-0 cursor-pointer items-center gap-1.5 px-1 py-1.5 text-xs text-text-muted transition-colors hover:text-text-secondary"><svg class="svg-inline--fa fa-moon lg:hidden" data-prefix="fas" data-icon="moon" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256S114.6 512 256 512c68.8 0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9 .4-9.8 .6-14.8 .6-101.6 0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4S322.6 8.5 312.7 6.3C294.4 2.2 275.4 0 256 0z"></path></svg><span class="uppercase tracking-wider max-lg:hidden">Appearance</span><span class="rounded-md bg-accent px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent-foreground max-lg:hidden">Dark</span><svg class="svg-inline--fa fa-chevron-down transition-transform max-lg:hidden" data-prefix="fas" data-icon="chevron-down" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M201.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 338.7 54.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg></button></span><span class="hidden h-5 w-px shrink-0 bg-border/60 lg:block" aria-hidden="true"></span><span class="outline-none inline-flex" id="reka-dropdown-menu-trigger-v-115" aria-haspopup="menu" aria-expanded="false" disabled="false" data-state="closed"><button type="button" class="flex shrink-0 cursor-pointer items-center px-1 py-1.5 text-text-muted transition-colors hover:text-text-secondary" aria-label="Notifications"><span class="relative inline-flex"><svg class="svg-inline--fa fa-bell" data-prefix="fas" data-icon="bell" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M224 0c-17.7 0-32 14.3-32 32l0 3.2C119 50 64 114.6 64 192l0 21.7c0 48.1-16.4 94.8-46.4 132.4L7.8 358.3C2.7 364.6 0 372.4 0 380.5 0 400.1 15.9 416 35.5 416l376.9 0c19.6 0 35.5-15.9 35.5-35.5 0-8.1-2.7-15.9-7.8-22.2l-9.8-12.2C400.4 308.5 384 261.8 384 213.7l0-21.7c0-77.4-55-142-128-156.8l0-3.2c0-17.7-14.3-32-32-32zM162 464c7.1 27.6 32.2 48 62 48s54.9-20.4 62-48l-124 0z"></path></svg><!----></span></button></span><span class="outline-none inline-flex" id="reka-dropdown-menu-trigger-v-116" aria-haspopup="menu" aria-expanded="false" disabled="false" data-state="closed"><button type="button" class="rounded-avatar transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg size-9" title="Member N" data-tour="user-menu-trigger"><img class="size-9 rounded-avatar object-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Avatar"></button></span></div></header><main id="main-content" tabindex="-1" class="px-4 py-6 lg:px-8 lg:py-8"><section data-v-3eedf900="" class="w-full"><div data-v-3eedf900="" class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"><div data-v-3eedf900="" data-tour="dashboard-atmosphere" class="dashboard-atmosphere-veil min-w-0"><p data-v-3eedf900="" class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-accent">✦ ─ CURRENT ATMOSPHERE <button data-v-3eedf900="" type="button" class="inline-flex h-5 w-5 shrink-0 cursor-pointer items-center justify-center rounded-full text-text-faint transition hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:cursor-default" aria-label="Show help for this section"><svg class="svg-inline--fa fa-circle-question h-4 w-4" data-prefix="fas" data-icon="circle-question" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm0-336c-17.7 0-32 14.3-32 32 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-44.2 35.8-80 80-80s80 35.8 80 80c0 47.2-36 67.2-56 74.5l0 3.8c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-8.1c0-20.5 14.8-35.2 30.1-40.2 6.4-2.1 13.2-5.5 18.2-10.3 4.3-4.2 7.7-10 7.7-19.6 0-17.7-14.3-32-32-32zM224 368a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"></path></svg></button></p><h1 data-v-3eedf900="" class="max-w-[35ch] text-balance font-display text-3xl tracking-tight text-text-heading lg:text-4xl">Bright Afternoon, <span data-v-3eedf900="" class="text-accent">Member N.sys</span></h1><div data-v-3eedf900="" class="mt-2 flex flex-wrap items-center gap-2"><p data-v-3eedf900="" class="max-w-[56ch] text-pretty text-base text-text-secondary sm:text-sm">Redacted note text.</p><div dir="ltr"><button type="button" tabindex="-1" aria-label="Show popup" aria-haspopup="listbox" aria-expanded="false" aria-controls="" data-state="closed" aria-disabled="false" class="cursor-pointer rounded-md px-1.5 py-0.5 text-xs text-text-muted transition hover:bg-surface-2 hover:text-text">Restless</button><!--v-if--></div></div><!----></div><div data-v-3eedf900="" class="flex shrink-0 items-center gap-3"><button data-v-3eedf900="" type="button" class="inline-flex items-center justify-center font-semibold rounded-button transition-all whitespace-nowrap font-sans disabled:opacity-50 disabled:cursor-not-allowed px-4 py-2 text-sm gap-2 bg-accent text-accent-foreground border border-accent hover:opacity-90"><svg class="svg-inline--fa fa-right-left" data-prefix="fas" data-icon="right-left" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M502.6 150.6l-96 96c-9.2 9.2-22.9 11.9-34.9 6.9S352 236.9 352 224l0-64-320 0c-17.7 0-32-14.3-32-32S14.3 96 32 96l320 0 0-64c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l96 96c12.5 12.5 12.5 32.8 0 45.3zm-397.3 352l-96-96c-12.5-12.5-12.5-32.8 0-45.3l96-96c9.2-9.2 22.9-11.9 34.9-6.9S160 275.1 160 288l0 64 320 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-320 0 0 64c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9z"></path></svg>Update Status<!----></button></div></div><div data-v-3eedf900="" class="grid grid-cols-1 gap-6 lg:grid-cols-4"><div data-v-3eedf900="" class="space-y-6 lg:col-span-3"><section data-v-3eedf900="" data-tour="dashboard-fronting" class="rounded-2xl border border-border bg-surface p-6"><header data-v-3eedf900="" class="mb-5 flex flex-wrap items-center gap-2"><div data-v-3eedf900="" class="flex items-center gap-2"><span data-v-3eedf900="" class="icon-badge"><svg data-v-3eedf900="" class="svg-inline--fa fa-arrows-repeat" data-prefix="fas" data-icon="arrows-repeat" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M470.6 118.6c6-6 9.4-14.1 9.4-22.6s-3.4-16.6-9.4-22.6l-80-80c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L370.7 64 192 64C86 64 0 150 0 256 0 273.7 14.3 288 32 288s32-14.3 32-32c0-70.7 57.3-128 128-128l178.7 0-25.4 25.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l80-80zM41.4 393.4c-6 6-9.4 14.1-9.4 22.6s3.4 16.6 9.4 22.6l80 80c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L141.3 448 320 448c106 0 192-86 192-192 0-17.7-14.3-32-32-32s-32 14.3-32 32c0 70.7-57.3 128-128 128l-178.7 0 25.4-25.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-80 80z"></path></svg></span><span data-v-3eedf900="" class="font-semibold text-text-heading">Fronting Now</span></div><div data-v-3eedf900="" class="ml-auto flex items-center gap-2"><button data-v-3eedf900="" type="button" class="inline-flex items-center justify-center font-semibold rounded-button transition-all whitespace-nowrap font-sans disabled:opacity-50 disabled:cursor-not-allowed px-3 py-1.5 text-[13px] gap-1.5 bg-transparent text-text-secondary border border-transparent hover:bg-surface hover:text-text"><!---->Manage Front<!----></button><button data-v-3eedf900="" type="button" class="inline-flex items-center justify-center font-semibold rounded-button transition-all whitespace-nowrap font-sans disabled:opacity-50 disabled:cursor-not-allowed px-3 py-1.5 text-[13px] gap-1.5 bg-transparent text-text-secondary border border-transparent hover:bg-surface hover:text-text"><!---->End All<!----></button></div></header><div data-v-3eedf900="" class="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"><div data-v-3eedf900="" class="group flex min-w-0 flex-col items-center gap-2"><span class="outline-none inline-flex" id="reka-dropdown-menu-trigger-v-128" aria-haspopup="menu" aria-expanded="false" disabled="false" data-state="closed"><button data-v-3eedf900="" type="button" class="relative cursor-pointer" title="Member O"><div data-v-3eedf900="" class="flex size-16 items-center justify-center overflow-hidden rounded-avatar ring-2 ring-offset-2 ring-offset-surface transition" style="background-color: rgb(143, 162, 247); --tw-ring-color: #7c3aed;"><img data-v-3eedf900="" class="size-full rounded-avatar object-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Avatar"></div><span data-v-3eedf900="" class="absolute bottom-0.5 right-0.5 size-3 rounded-full ring-2 ring-surface" style="background-color: rgb(124, 58, 237);"></span></button></span><span data-v-3eedf900="" class="max-w-full truncate text-center text-xs font-medium text-text-secondary">Member O</span><span data-v-3eedf900="" class="text-center text-[10px] font-bold uppercase tracking-wider" style="color: rgb(124, 58, 237);"><span data-v-3eedf900="">✦</span>&nbsp;&nbsp;Front</span><!----></div><div data-v-3eedf900="" class="group flex min-w-0 flex-col items-center gap-2"><span class="outline-none inline-flex" id="reka-dropdown-menu-trigger-v-129" aria-haspopup="menu" aria-expanded="false" disabled="false" data-state="closed"><button data-v-3eedf900="" type="button" class="relative cursor-pointer" title="Member S"><div data-v-3eedf900="" class="flex size-16 items-center justify-center overflow-hidden rounded-avatar ring-2 ring-offset-2 ring-offset-surface transition" style="background-color: rgb(251, 146, 60); --tw-ring-color: #f59e0b;"><img data-v-3eedf900="" class="size-full rounded-avatar object-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Avatar"></div><span data-v-3eedf900="" class="absolute bottom-0.5 right-0.5 size-3 rounded-full ring-2 ring-surface" style="background-color: rgb(245, 158, 11);"></span></button></span><span data-v-3eedf900="" class="max-w-full truncate text-center text-xs font-medium text-text-secondary">Member S</span><span data-v-3eedf900="" class="text-center text-[10px] font-bold uppercase tracking-wider" style="color: rgb(245, 158, 11);"><span data-v-3eedf900="">◐</span>&nbsp;&nbsp;Co-Con</span><!----></div><!----><div data-v-3eedf900="" class="flex flex-col items-center gap-2"><button data-v-3eedf900="" type="button" class="flex size-16 items-center justify-center rounded-avatar border-2 border-dashed border-border bg-surface-2/50 text-text-muted transition hover:border-accent hover:text-accent" aria-label="Switch front"><svg data-v-3eedf900="" class="svg-inline--fa fa-plus" data-prefix="fas" data-icon="plus" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z"></path></svg></button><span data-v-3eedf900="" class="text-xs text-text-muted">Switch</span></div></div><p data-v-3eedf900="" class="mt-5 text-xs text-text-muted">2 headmates currently active</p></section><div data-v-3eedf900="" class="grid grid-cols-1 gap-6 md:grid-cols-2"><section data-v-3eedf900="" class="dashboard-card-section @container rounded-2xl border border-border bg-surface p-5"><header data-v-3eedf900="" class="dashboard-card-heading mb-5 flex items-center justify-between gap-2"><div data-v-3eedf900="" class="flex min-w-0 items-center gap-2"><svg data-v-3eedf900="" class="svg-inline--fa fa-clock shrink-0 text-accent" data-prefix="fas" data-icon="clock" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M256 0a256 256 0 1 1 0 512 256 256 0 1 1 0-512zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"></path></svg><h2 data-v-3eedf900="" class="truncate font-display text-sm font-semibold text-text-heading">Recent Activity</h2></div><a data-v-3eedf900="" class="shrink-0 text-xs text-accent no-underline hover:text-accent" href="https://pluralspace.app/activity">View all →</a></header><div data-v-3eedf900="" class="space-y-1"><div data-v-3eedf900="" class="flex items-start gap-3 rounded-lg px-2 py-2 transition hover:bg-bg-2/40"><span data-v-3eedf900="" class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-zinc-500/15 text-zinc-400"><svg data-v-3eedf900="" class="svg-inline--fa fa-arrow-left" data-prefix="fas" data-icon="arrow-left" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 105.4-105.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></span><div data-v-3eedf900="" class="min-w-0 flex-1"><p data-v-3eedf900="" class="text-sm text-text-secondary"><strong data-v-3eedf900="" class="text-text-heading">Member U<!----></strong>
+	Redacted note text.</p><p data-v-3eedf900="" class="mt-0.5 text-xs text-text-muted">2h ago</p></div></div><div data-v-3eedf900="" class="flex items-start gap-3 rounded-lg px-2 py-2 transition hover:bg-bg-2/40"><span data-v-3eedf900="" class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-emerald-500/15 text-emerald-400"><svg data-v-3eedf900="" class="svg-inline--fa fa-arrow-right" data-prefix="fas" data-icon="arrow-right" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></span><div data-v-3eedf900="" class="min-w-0 flex-1"><p data-v-3eedf900="" class="text-sm text-text-secondary"><strong data-v-3eedf900="" class="text-text-heading">Member U<!----></strong>
+	- co-con. <!----></p><p data-v-3eedf900="" class="mt-0.5 text-xs text-text-muted">3h ago</p></div></div><div data-v-3eedf900="" class="flex items-start gap-3 rounded-lg px-2 py-2 transition hover:bg-bg-2/40"><span data-v-3eedf900="" class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-zinc-500/15 text-zinc-400"><svg data-v-3eedf900="" class="svg-inline--fa fa-arrow-left" data-prefix="fas" data-icon="arrow-left" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 105.4-105.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></span><div data-v-3eedf900="" class="min-w-0 flex-1"><p data-v-3eedf900="" class="text-sm text-text-secondary"><strong data-v-3eedf900="" class="text-text-heading">Member E<!----></strong>
+	Redacted note text.</p><p data-v-3eedf900="" class="mt-0.5 text-xs text-text-muted">16h ago</p></div></div><div data-v-3eedf900="" class="flex items-start gap-3 rounded-lg px-2 py-2 transition hover:bg-bg-2/40"><span data-v-3eedf900="" class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-accent/15 text-accent"><svg data-v-3eedf900="" class="svg-inline--fa fa-circle-dot" data-prefix="fas" data-icon="circle-dot" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm0-352a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"></path></svg></span><div data-v-3eedf900="" class="min-w-0 flex-1"><p data-v-3eedf900="" class="text-sm text-text-secondary"><strong data-v-3eedf900="" class="text-text-heading">Member O<!----></strong>
+	- front. <!----></p><p data-v-3eedf900="" class="mt-0.5 text-xs text-text-muted">17h ago</p></div></div><div data-v-3eedf900="" class="flex items-start gap-3 rounded-lg px-2 py-2 transition hover:bg-bg-2/40"><span data-v-3eedf900="" class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-emerald-500/15 text-emerald-400"><svg data-v-3eedf900="" class="svg-inline--fa fa-arrow-right" data-prefix="fas" data-icon="arrow-right" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-105.4 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></span><div data-v-3eedf900="" class="min-w-0 flex-1"><p data-v-3eedf900="" class="text-sm text-text-secondary"><strong data-v-3eedf900="" class="text-text-heading">Member E<!----></strong>
+	- influencing. <!----></p><p data-v-3eedf900="" class="mt-0.5 text-xs text-text-muted">17h ago</p></div></div><div data-v-3eedf900="" class="flex items-start gap-3 rounded-lg px-2 py-2 transition hover:bg-bg-2/40"><span data-v-3eedf900="" class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-zinc-500/15 text-zinc-400"><svg data-v-3eedf900="" class="svg-inline--fa fa-arrow-left" data-prefix="fas" data-icon="arrow-left" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 105.4-105.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></span><div data-v-3eedf900="" class="min-w-0 flex-1"><p data-v-3eedf900="" class="text-sm text-text-secondary"><strong data-v-3eedf900="" class="text-text-heading">Member O<!----></strong>
+	Redacted note text.</p><p data-v-3eedf900="" class="mt-0.5 text-xs text-text-muted">17h ago</p></div></div></div></section><section data-v-3eedf900="" class="dashboard-card-section @container rounded-2xl border border-border bg-surface p-5"><header data-v-3eedf900="" class="dashboard-card-heading mb-5 flex items-center justify-between gap-2"><div data-v-3eedf900="" class="flex min-w-0 items-center gap-2"><svg data-v-3eedf900="" class="svg-inline--fa fa-chart-bar shrink-0 text-accent" data-prefix="fas" data-icon="chart-bar" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M32 32c17.7 0 32 14.3 32 32l0 336c0 8.8 7.2 16 16 16l400 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L80 480c-44.2 0-80-35.8-80-80L0 64C0 46.3 14.3 32 32 32zm96 64c0-17.7 14.3-32 32-32l192 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32zm32 80l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 112l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg><h2 data-v-3eedf900="" class="truncate font-display text-sm font-semibold text-text-heading">Active poll</h2></div><a data-v-3eedf900="" class="shrink-0 text-xs text-accent no-underline hover:text-accent" href="https://pluralspace.app/polls">View all →</a></header><div data-v-3eedf900="" class="border-2 border-dashed border-border rounded-2xl py-14 px-6 text-center bg-[radial-gradient(circle,_color-mix(in_srgb,_var(--color-accent)_12%,_transparent)_1px,_transparent_1px)] bg-[size:8px_8px]"><div class="flex justify-center"><svg class="svg-inline--fa fa-chart-bar" data-prefix="fas" data-icon="chart-bar" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M32 32c17.7 0 32 14.3 32 32l0 336c0 8.8 7.2 16 16 16l400 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L80 480c-44.2 0-80-35.8-80-80L0 64C0 46.3 14.3 32 32 32zm96 64c0-17.7 14.3-32 32-32l192 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32zm32 80l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 112l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></div><div class="font-display text-lg text-text-heading mt-4 tracking-wide">No active polls</div><p class="text-text-muted text-[13px] mt-1.5 max-w-xs mx-auto">Redacted note text.</p><div data-v-3eedf900="" class="mt-4 flex justify-center"><a data-v-3eedf900="" href="https://pluralspace.app/polls/create"><button data-v-3eedf900="" type="button" class="inline-flex items-center justify-center font-semibold rounded-button transition-all whitespace-nowrap font-sans disabled:opacity-50 disabled:cursor-not-allowed px-3 py-1.5 text-[13px] gap-1.5 bg-accent text-accent-foreground border border-accent hover:opacity-90"><svg class="svg-inline--fa fa-plus" data-prefix="fas" data-icon="plus" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M256 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 160-160 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l160 0 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160 160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-160 0 0-160z"></path></svg>Create a poll<!----></button></a></div></div></section></div></div><aside data-v-3eedf900="" class="space-y-4"><div data-v-3eedf900="" class="sticky-note-wrap w-full" style="--note-rot: 0deg;"><div class="sticky-note group/note flex h-full min-w-0 flex-col overflow-hidden rounded-[3px] p-5 sticky-note--flat" style="--note-bg: #ede9fe; --note-ink: #030712; --note-font-size: calc(var(--text-base) * 1); font-family: &quot;Instrument Sans&quot;, ui-sans-serif, system-ui, sans-serif;"><div class="mb-1.5 flex items-start justify-between gap-2 font-sans" style="color: var(--note-ink);"><p data-v-3eedf900="" class="text-[10px] uppercase tracking-wide opacity-90">Thought of the day</p><div data-v-3eedf900="" class="flex items-center gap-0.5"><a data-v-3eedf900="" class="flex size-6 items-center justify-center rounded-full no-underline opacity-70 transition hover:bg-black/10 hover:opacity-100" style="color: var(--note-ink);" aria-label="Member A" title="Member A" href="https://pluralspace.app/space/thoughts"><svg data-v-3eedf900="" class="svg-inline--fa fa-clock-rotate-left" data-prefix="fas" data-icon="clock-rotate-left" role="img" viewBox="0 0 576 512" aria-hidden="true"><path class="" fill="currentColor" d="M288 64c106 0 192 86 192 192S394 448 288 448c-65.2 0-122.9-32.5-157.6-82.3-10.1-14.5-30.1-18-44.6-7.9s-18 30.1-7.9 44.6C124.1 468.6 201 512 288 512 429.4 512 544 397.4 544 256S429.4 0 288 0C202.3 0 126.5 42.1 80 106.7L80 80c0-17.7-14.3-32-32-32S16 62.3 16 80l0 112c0 17.7 14.3 32 32 32l24.6 0c.5 0 1 0 1.5 0l86 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-38.3 0C154.9 102.6 217 64 288 64zm24 88c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1z"></path></svg></a><button data-v-3eedf900="" type="button" class="flex size-6 cursor-pointer items-center justify-center rounded-full opacity-70 transition hover:bg-black/10 hover:opacity-100" style="color: var(--note-ink);" aria-label="Member Y" title="Member Y"><svg data-v-3eedf900="" class="svg-inline--fa fa-pen-to-square" data-prefix="fas" data-icon="pen-to-square" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L368 46.1 465.9 144 490.3 119.6c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L432 177.9 334.1 80 172.4 241.7zM96 64C43 64 0 107 0 160L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-96c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7-14.3 32-32 32L96 448c-17.7 0-32-14.3-32-32l0-256c0-17.7 14.3-32 32-32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L96 64z"></path></svg></button></div></div><div class="flex min-w-0 flex-1 py-1 items-start"><p class="min-w-0 whitespace-pre-line leading-snug [overflow-wrap:anywhere] text-left" style="color: var(--note-ink); font-size: var(--note-font-size);">Redacted note text.</p></div><div class="mt-4 flex items-end justify-between gap-2 font-sans"><div class="flex flex-col min-w-0 items-start gap-1.5"><!----><span data-v-3eedf900="" class="text-[11px] opacity-70" style="color: var(--note-ink);">4 Sept 2026 · 10:41</span></div><span class="inline-flex shrink-0 items-center gap-1 text-[10px] font-bold uppercase tracking-wider opacity-70" style="color: var(--note-ink);"><svg class="svg-inline--fa fa-thumbtack text-[9px]" data-prefix="fas" data-icon="thumbtack" role="img" viewBox="0 0 384 512" aria-hidden="true"><path class="" fill="currentColor" d="M32 32C32 14.3 46.3 0 64 0L320 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-29.5 0 10.3 134.1c37.1 21.2 65.8 56.4 78.2 99.7l3.8 13.4c2.8 9.7 .8 20-5.2 28.1S362 352 352 352L32 352c-10 0-19.5-4.7-25.5-12.7s-8-18.4-5.2-28.1L5 297.8c12.4-43.3 41-78.5 78.2-99.7L93.5 64 64 64C46.3 64 32 49.7 32 32zM160 400l64 0 0 112c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-112z"></path></svg>Current</span></div><!----></div></div><a data-v-3eedf900="" class="block overflow-hidden rounded-2xl border border-border bg-surface no-underline transition hover:bg-surface-2/50" href="https://pluralspace.app/stats"><div data-v-3eedf900="" class="relative h-36 overflow-hidden bg-bg"><img data-v-3eedf900="" class="h-36 w-full object-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Avatar"></div><div data-v-3eedf900="" class="p-4"><h3 data-v-3eedf900="" class="font-semibold text-text-heading">Member N.sys</h3><div data-v-3eedf900="" class="mt-3 grid grid-cols-2 gap-2"><div data-v-3eedf900="" class="rounded-lg bg-surface-2 px-3 py-2 text-center"><p data-v-3eedf900="" class="text-[10px] font-semibold uppercase tracking-wider text-text-muted">Headmates</p><p data-v-3eedf900="" class="text-xl font-bold text-text-heading">10</p><!----></div><div data-v-3eedf900="" class="rounded-lg bg-surface-2 px-3 py-2 text-center"><p data-v-3eedf900="" class="text-[10px] font-semibold uppercase tracking-wider text-text-muted">Fronts</p><p data-v-3eedf900="" class="text-xl font-bold text-text-heading">38</p></div></div></div></a><a data-v-3eedf900="" class="flex items-center gap-3 rounded-2xl border border-border bg-surface px-4 py-3.5 no-underline transition hover:border-accent" href="https://pluralspace.app/stats"><span data-v-3eedf900="" class="icon-badge-sm"><svg data-v-3eedf900="" class="svg-inline--fa fa-chart-bar" data-prefix="fas" data-icon="chart-bar" role="img" viewBox="0 0 512 512" aria-hidden="true"><path class="" fill="currentColor" d="M32 32c17.7 0 32 14.3 32 32l0 336c0 8.8 7.2 16 16 16l400 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L80 480c-44.2 0-80-35.8-80-80L0 64C0 46.3 14.3 32 32 32zm96 64c0-17.7 14.3-32 32-32l192 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32zm32 80l128 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-128 0c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 112l256 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-256 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></span><div data-v-3eedf900=""><p data-v-3eedf900="" class="text-sm font-semibold text-text-secondary">System Insights</p><p data-v-3eedf900="" class="text-xs text-text-muted">View fronting patterns</p></div><svg data-v-3eedf900="" class="svg-inline--fa fa-chevron-right ml-auto text-text-muted" data-prefix="fas" data-icon="chevron-right" role="img" viewBox="0 0 320 512" aria-hidden="true"><path class="" fill="currentColor" d="M311.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L243.2 256 73.9 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg></a><a data-v-3eedf900="" class="flex items-center gap-3 rounded-2xl border border-border bg-surface px-4 py-3.5 no-underline transition hover:border-accent" href="https://pluralspace.app/journal"><span data-v-3eedf900="" class="icon-badge-sm"><svg data-v-3eedf900="" class="svg-inline--fa fa-book" data-prefix="fas" data-icon="book" role="img" viewBox="0 0 448 512" aria-hidden="true"><path class="" fill="currentColor" d="M384 512L96 512c-53 0-96-43-96-96L0 96C0 43 43 0 96 0L400 0c26.5 0 48 21.5 48 48l0 288c0 20.9-13.4 38.7-32 45.3l0 66.7c17.7 0 32 14.3 32 32s-14.3 32-32 32l-32 0zM96 384c-17.7 0-32 14.3-32 32s14.3 32 32 32l256 0 0-64-256 0zm32-232c0 13.3 10.7 24 24 24l176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-176 0c-13.3 0-24 10.7-24 24zm24 72c-13.3 0-24 10.7-24 24s10.7 24 24 24l176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-176 0z"></path></svg></span><div data-v-3eedf900=""><p data-v-3eedf900="" class="text-sm font-semibold text-text-secondary">Digital Journal</p><p data-v-3eedf900="" class="text-xs text-text-muted">Record system logs</p></div><svg data-v-3eedf900="" class="svg-inline--fa fa-chevron-right ml-auto text-text-muted" data-prefix="fas" data-icon="chevron-right" role="img" viewBox="0 0 320 512" aria-hidden="true"><path class="" fill="currentColor" d="M311.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L243.2 256 73.9 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg></a></aside></div></section><!----><!----></main></div><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><!--v-if--><ol tabindex="-1" class="fixed right-4 z-50 flex max-w-[min(420px,calc(100vw-2rem))] flex-col gap-2 outline-none" style="bottom: max(1rem, env(safe-area-inset-bottom));"></ol><!--v-if--></div></div></div>
+
+	<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+</body></html>
+

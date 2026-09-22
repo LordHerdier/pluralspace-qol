@@ -1,0 +1,11 @@
+// ==UserScript==
+// @name         pluralspace QoL
+// @namespace    https://pluralspace.app/
+// @version      1.0.0
+// @description  Quality of life tweaks for pluralspace.app
+// @match        https://pluralspace.app/*
+// @run-at       document-start
+// @grant        GM_registerMenuCommand
+// @updateURL    https://github.com/LordHerdier/pluralspace-qol/raw/branch/main/src/pluralspace-qol.user.js
+// @downloadURL  https://github.com/LordHerdier/pluralspace-qol/raw/branch/main/src/pluralspace-qol.user.js
+// ==/UserScript==
