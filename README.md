@@ -1,6 +1,5 @@
 # pluralspace-qol
 
-![License](https://img.shields.io/github/license/LordHerdier/pluralspace-qol)
 ![Latest Release](https://img.shields.io/github/v/release/LordHerdier/pluralspace-qol)
 ![Userscript](https://img.shields.io/badge/userscript-Tampermonkey%20%7C%20Violentmonkey-brightgreen)
 
