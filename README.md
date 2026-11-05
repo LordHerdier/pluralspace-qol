@@ -102,7 +102,7 @@ HTML Description:
 | **Pin the day drawer**          | On the calendar page, this shows the day panel as a right-hand column instead of a modal slide-over, so the calendar stays visible and clickable.                                                                                 |
 | **Open today automatically**    | Opens today's panel on arrival at the fronting history.                                                                                                                                                                           |
 | **Prefill "Ended at"**          | Seeds a blank end time from the start time when editing a front, instead of making you retype the date.                                                                                                                           |
-| **Fronting stopwatch**          | Shows how long each member has been fronting, under their name in the dashboard's _Fronting Now_ card.                                                                                                                            |
+| **Fronting seconds**            | Pluralspace now shows how long each member has been fronting, but only to the minute. This counts it live down to the second and shows the exact start time on hover.                                                                       |
 | **Names link to profiles**      | Clicking on a member's name on the dashboard will bring you to their profile. Clicking their picture still allows adjusting front status.                                                                                         |
 | **Dates on cross-day fronts**   | In the fronting history's day panel, shows the date beside a start or end time that falls on another day, so a front that ran past midnight reads as `Sep 3, 11:40 pm → 1:15 am` rather than an unexplained `11:40 pm → 1:15 am`. |
 | **Render HTML in descriptions** | Shows saved descriptions as formatted HTML, the way the editor's preview does, instead of raw markup. Sanitised first. ([see below](#a-note-on-html-descriptions))                                                                |
@@ -189,7 +189,7 @@ node scripts/check-early.js       # document-start path
 node scripts/check-prefill.js     # end-time prefill, incl. the events Vue needs
 node scripts/check-24h.js         # formatter patch, against the app's own helper
 node scripts/check-config.js      # settings panel and per-tweak gating
-node scripts/check-stopwatch.js   # elapsed formatting, ticking, re-render recovery
+node scripts/check-stopwatch.js   # live seconds on the app's duration, re-render recovery
 node scripts/check-description.js # HTML rendering and the sanitiser
 node scripts/check-namelinks.js   # profile navigation from the dashboard
 node scripts/check-frontdates.js  # dates on fronts that cross midnight

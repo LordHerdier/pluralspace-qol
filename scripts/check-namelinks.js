@@ -36,9 +36,22 @@ const IDS = [
     page.evaluate(
       ({ ids, canView }) => {
         const card = document.querySelector('[data-tour="dashboard-fronting"]');
-        const names = [...card.querySelector(".grid").children]
-          .filter((c) => c.querySelector("img"))
-          .map((c) => c.querySelector("button[title]").getAttribute("title"));
+        const grid = card.querySelector(".grid");
+        const cells = () =>
+          [...grid.children].filter((c) => c.querySelector("img"));
+        // The fixture may capture a single member; the checks need two.
+        if (cells().length < 2) {
+          const copy = cells()[0].cloneNode(true);
+          copy.removeAttribute("data-current-front-id");
+          copy.querySelector("button[title]").setAttribute("title", "Second");
+          copy.querySelector(
+            "span.max-w-full.truncate.text-center",
+          ).textContent = "Second";
+          grid.insertBefore(copy, cells()[0].nextSibling);
+        }
+        const names = cells().map((c) =>
+          c.querySelector("button[title]").getAttribute("title"),
+        );
         window.__visits = [];
         window.__opens = [];
         window.open = (url) => window.__opens.push(url);

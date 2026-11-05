@@ -1,4 +1,4 @@
-// Verifies the fronting stopwatch against the real dashboard markup.
+// Verifies the fronting seconds patch against the app's own duration element.
 
 const { chromium } = require("playwright");
 const fs = require("fs");
@@ -34,21 +34,31 @@ const check = (name, ok, extra = "") => {
   });
   check(
     "fixture has fronting cells",
-    names.length >= 2,
+    names.length >= 1,
     `(${names.length}: ${names.join(", ")})`,
   );
 
+  const ids = await page.evaluate(() =>
+    [
+      ...document.querySelectorAll(
+        '[data-tour="dashboard-fronting"] [data-current-front-id]',
+      ),
+    ].map((c) => c.getAttribute("data-current-front-id")),
+  );
+  check("fixture has app duration elements", ids.length >= 1);
+
   const stub = (offsets) =>
     page.evaluate(
-      ({ names, offsets }) => {
+      ({ ids, offsets }) => {
         const app = document.getElementById("app");
         app.__vue_app__ = {
           config: {
             globalProperties: {
               $page: {
                 props: {
-                  currentFronts: names.map((n, i) => ({
-                    member: { name: n },
+                  currentFronts: ids.map((id, i) => ({
+                    id,
+                    member: { name: "x" },
                     started_at: new Date(Date.now() - offsets[i]).toISOString(),
                   })),
                 },
@@ -57,63 +67,50 @@ const check = (name, ok, extra = "") => {
           },
         };
       },
-      { names, offsets },
+      { ids, offsets },
     );
 
   const MIN = 60000,
     HOUR = 60 * MIN,
     DAY = 24 * HOUR;
-  await stub([90 * MIN, 3 * DAY + 4 * HOUR]);
-  await page.evaluate(script);
-  await page.waitForTimeout(120);
-
   const read = () =>
-    page.evaluate(() => {
-      const card = document.querySelector('[data-tour="dashboard-fronting"]');
-      const grid = card.querySelector(".grid");
-      return [...grid.children]
-        .filter((c) => c.querySelector("img"))
-        .map((c) => {
-          const sw = c.querySelector(".psqol-stopwatch");
-          return sw
-            ? {
-                text: sw.textContent,
-                last: sw === c.lastElementChild,
-                title: sw.title,
-              }
-            : null;
-        });
-    });
+    page.evaluate(() =>
+      [
+        ...document.querySelectorAll(
+          '[data-tour="dashboard-fronting"] time[data-front-duration]',
+        ),
+      ].map((t) => ({ text: t.textContent, title: t.title })),
+    );
+
+  const original = await read();
+  const offs = [90 * MIN, 3 * DAY + 4 * HOUR].slice(0, ids.length);
+  await stub(offs);
+  await page.evaluate(script);
+  await page.waitForTimeout(150);
 
   let got = await read();
   check(
-    "stopwatch rendered in every cell",
-    got.every((g) => g),
+    "no extra element added",
+    (await page.locator(".psqol-stopwatch").count()) === 0,
   );
   check(
     "90 minutes formats as 1h 30m",
     got[0]?.text === "1h 30m",
     `got "${got[0]?.text}"`,
   );
-  check(
-    "3d 4h formats as 3d 04h",
-    got[1]?.text === "3d 04h",
-    `got "${got[1]?.text}"`,
-  );
-  check(
-    "sits at the end of the cell",
-    got.every((g) => g.last),
-  );
+  if (ids.length > 1)
+    check(
+      "3d 4h formats as 3d 04h",
+      got[1]?.text === "3d 04h",
+      `got "${got[1]?.text}"`,
+    );
   check(
     "exact start time in the tooltip",
     /^Fronting since /.test(got[0]?.title || ""),
   );
 
-  // Sub-minute and sub-hour formats.
-  await page.evaluate(() =>
-    document.querySelectorAll(".psqol-stopwatch").forEach((e) => e.remove()),
-  );
-  await stub([42000, 5 * MIN + 7000]);
+  // Sub-minute and sub-hour formats: the part the app itself rounds away.
+  await stub([42000, 5 * MIN + 7000].slice(0, ids.length));
   await page.waitForTimeout(1200);
   got = await read();
   check(
@@ -121,43 +118,42 @@ const check = (name, ok, extra = "") => {
     got[0]?.text === "42s",
     `got "${got[0]?.text}"`,
   );
-  check(
-    "5m 07s keeps seconds",
-    got[1]?.text === "5m 07s",
-    `got "${got[1]?.text}"`,
-  );
+  if (ids.length > 1)
+    check(
+      "5m 07s keeps seconds",
+      got[1]?.text === "5m 07s",
+      `got "${got[1]?.text}"`,
+    );
 
-  // It has to keep ticking, and survive a re-render dropping the elements.
-  const before = (await read())[0].text;
+  const before = got[0].text;
   await page.waitForTimeout(2100);
   check("ticks live", (await read())[0].text !== before);
 
-  await page.evaluate(() =>
-    document.querySelectorAll(".psqol-stopwatch").forEach((e) => e.remove()),
-  );
+  // The app re-rendering its own text must be overwritten again.
+  await page.evaluate(() => {
+    document.querySelector(
+      '[data-tour="dashboard-fronting"] time[data-front-duration]',
+    ).textContent = "<1m";
+  });
   await page.waitForTimeout(1200);
-  check(
-    "reappears after a re-render removes it",
-    (await read()).every((g) => g),
-  );
+  check("recovers after a re-render", (await read())[0].text !== "<1m");
 
-  // Toggle off must clean up, and back on must restore, without a reload.
+  // Off restores what the app rendered; on brings it back, without a reload.
   await page.evaluate(() =>
     document.documentElement.setAttribute("data-psqol-stopwatch", "off"),
   );
   await page.waitForTimeout(1200);
+  got = await read();
+  check("toggling off restores the app's text", got[0].text === "<1m");
   check(
-    "toggling off removes them",
-    (await read()).every((g) => !g),
+    "toggling off restores the app's title",
+    got[0].title === original[0].title,
   );
   await page.evaluate(() =>
     document.documentElement.setAttribute("data-psqol-stopwatch", "on"),
   );
   await page.waitForTimeout(1200);
-  check(
-    "toggling on restores them",
-    (await read()).every((g) => g),
-  );
+  check("toggling on restores seconds", /s$/.test((await read())[0].text));
 
   await browser.close();
   const pass = results.every(([, ok]) => ok);

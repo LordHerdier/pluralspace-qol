@@ -13,7 +13,9 @@ const script = fs.readFileSync(
 );
 // Derived from the script rather than hardcoded, so adding a tweak does not
 // fail this check for the wrong reason.
-const LABELS = [...script.matchAll(/^\s*label: '(.+?)',$/gm)].map((m) => m[1]);
+const LABELS = [...script.matchAll(/^\s*label: (?:'.+?'|".+?"),$/gm)].map(
+  (m) => m[0],
+);
 
 const results = [];
 const check = (name, ok, extra = "") => {

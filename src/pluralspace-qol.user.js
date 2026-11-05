@@ -65,8 +65,8 @@ const TWEAKS = [
   },
   {
     key: "stopwatch",
-    label: "Fronting stopwatch",
-    desc: "Show how long each member has been fronting, under their name on the dashboard.",
+    label: "Fronting seconds",
+    desc: "Count the dashboard's fronting duration down to the second, and show the exact start time on hover.",
   },
   {
     key: "nameLinks",
@@ -289,7 +289,9 @@ const DASHBOARD_PATCH = `(function () {
   var DRAWER_NAME = '${SEL.drawerName}';
   var DRAWER_TIME = '${SEL.drawerTime}';
   var DRAWER_TITLE = '${SEL.drawerTitle}';
-  var CLS = 'psqol-stopwatch';
+  // The app's own live duration. It only resolves to the minute, so the
+  // stopwatch rewrites its text rather than adding a second element.
+  var DUR = 'time[data-front-duration][data-ongoing="true"]';
 
   function pageProps() {
     try {
@@ -574,6 +576,12 @@ const DASHBOARD_PATCH = `(function () {
   }
 
   function entryFor(cell, data, i) {
+    var id = cell.getAttribute('data-current-front-id');
+    if (id) {
+      for (var k = 0; k < data.length; k++) {
+        if (data[k] && data[k].id === id) return data[k];
+      }
+    }
     // Match on the name in the avatar button's title, which is what the props
     // carry; fall back to position.
     var btn = cell.querySelector('button[title]');
@@ -606,6 +614,39 @@ const DASHBOARD_PATCH = `(function () {
     window.location.assign(url);
   }
 
+  // Original text and title are kept beside the rewrite so switching the
+  // tweak off puts back exactly what the app rendered.
+  function restoreDuration(el) {
+    var out = el.getAttribute('data-psqol-dur-out');
+    if (out === null) return;
+    if (el.textContent === out) {
+      el.textContent = el.getAttribute('data-psqol-dur-raw');
+    }
+    if (el.title === el.getAttribute('data-psqol-dur-title-out')) {
+      el.title = el.getAttribute('data-psqol-dur-title') || '';
+    }
+    ['raw', 'out', 'title', 'title-out'].forEach(function (k) {
+      el.removeAttribute('data-psqol-dur-' + k);
+    });
+  }
+
+  // Text and title are tracked separately: the app can re-render one without
+  // the other, and our own writes must never be mistaken for the original.
+  function showDuration(el, t) {
+    if (el.textContent !== el.getAttribute('data-psqol-dur-out')) {
+      el.setAttribute('data-psqol-dur-raw', el.textContent);
+    }
+    if (el.title !== el.getAttribute('data-psqol-dur-title-out')) {
+      el.setAttribute('data-psqol-dur-title', el.title || '');
+    }
+    var txt = fmt(Date.now() - t);
+    var title = 'Fronting since ' + new Date(t).toLocaleString();
+    if (el.textContent !== txt) el.textContent = txt;
+    if (el.title !== title) el.title = title;
+    el.setAttribute('data-psqol-dur-out', txt);
+    el.setAttribute('data-psqol-dur-title-out', title);
+  }
+
   function tick() {
     var swOn = document.documentElement.getAttribute('data-psqol-stopwatch') === 'on';
     var linkOn = document.documentElement.getAttribute('data-psqol-namelink') === 'on';
@@ -622,7 +663,7 @@ const DASHBOARD_PATCH = `(function () {
     if (!card) return;
 
     if (!swOn) {
-      [].forEach.call(card.querySelectorAll('.' + CLS), function (e) { e.remove(); });
+      [].forEach.call(card.querySelectorAll(DUR), restoreDuration);
     }
     if (!linkOn) {
       [].forEach.call(card.querySelectorAll('[data-psqol-nav]'), function (e) {
@@ -653,18 +694,8 @@ const DASHBOARD_PATCH = `(function () {
 
       if (swOn) {
         var t = parseStarted(f.started_at);
-        if (isNaN(t)) return;
-        var el = cell.querySelector('.' + CLS);
-        if (!el) {
-          el = document.createElement('span');
-          el.className = CLS;
-          el.style.cssText = 'font-variant-numeric:tabular-nums;font-size:10px;' +
-            'line-height:1.2;letter-spacing:.04em;opacity:.65;text-align:center';
-          cell.appendChild(el);
-        }
-        var txt = fmt(Date.now() - t);
-        if (el.textContent !== txt) el.textContent = txt;
-        el.title = 'Fronting since ' + new Date(t).toLocaleString();
+        var el = cell.querySelector(DUR);
+        if (!isNaN(t) && el) showDuration(el, t);
       }
     });
   }

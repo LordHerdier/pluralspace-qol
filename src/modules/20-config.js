@@ -18,8 +18,8 @@ const TWEAKS = [
   },
   {
     key: "stopwatch",
-    label: "Fronting stopwatch",
-    desc: "Show how long each member has been fronting, under their name on the dashboard.",
+    label: "Fronting seconds",
+    desc: "Count the dashboard's fronting duration down to the second, and show the exact start time on hover.",
   },
   {
     key: "nameLinks",
