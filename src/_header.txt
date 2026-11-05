@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         pluralspace QoL
 // @namespace    https://pluralspace.app/
-// @version      1.0.0
+// @version      1.0.1
 // @description  Quality of life tweaks for pluralspace.app
 // @match        https://pluralspace.app/*
 // @run-at       document-start
